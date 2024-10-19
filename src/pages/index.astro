@@ -8,7 +8,9 @@ import LinkedlnIcon from '../icons/Linkedln.astro';
 import MailIcon from '../icons/Mail.astro';
 import SocialPill from '../components/SocialPill.astro'
 import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
 import Briefcase from '../icons/Briefcase.astro';
+import Code from '../icons/Code.astro';
 ---
 
 <Layout 
@@ -16,50 +18,57 @@ title="AppJaVaDev Portfolio | Web Development and Mechatronic Projects"
 description='Web Development and IoT Projects'
 
 >
-	<main>
-		<SectionContainer id="top" class="py-36 pb-12">
+	<main class="px-12">
+		<SectionContainer id="top" class="py-40 pb-20">
 			<img 
-				class="rounded-full size-12 mb-4"
-				src="/src/img/photoCV.png" 
+				class="rounded-full size-24 mb-4"
+				src="https://media.licdn.com/dms/image/v2/C4E03AQGDgzzQVdLgqg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1581989897633?e=2147483647&v=beta&t=DPoBH5olsMfbSl2UdNgIkiYveMicrv3CDo8h48gtIdk" 
 				alt="AppJaVaDev Photo" 
 			/>
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-6">
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
 				Hola, soy appjavadev <a
 				href="#" 
 				target="" 
 				rel="noopener"
 				class="flex justify-center items-center"
 				>
-					<Badge>Disponible para trabajar</Badge>
+					<Badge>Disponible</Badge>
 				</a>
 			</h1>
-			<h2 class="text-xl text-wrap">
-				Desarrollador Web y Creador de Prototipos Mecatrónicos. <span class="text-red-200/50">De Cali, Colombia.</span><br>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[650px]">
+				Desarrollador Web y Creador de Prototipos Mecatrónicos. <span class="text-red-200/50">De Cali, Colombia.</span>
 				<span class="opacity-60">Enfocado en construir aplicaciones útiles de manera sostenible.</span>
 			</h2>
 
-			<nav class="flex gap-x-3 mt-12">
+			<nav class="flex gap-3 mt-12 flex-wrap">
 				
 					<SocialPill href="#">
-						<GitHubIcon class="size-6" />
+						<GitHubIcon class="size-6 lg:size-7" />
 						GitHub
 					</SocialPill>
 					<SocialPill href="#" >
-						<LinkedlnIcon class="size-6" />
+						<LinkedlnIcon class="size-6 lg:size-7" />
 						Linkedln
 					</SocialPill>
 					<SocialPill href="#" >
-						<MailIcon class="size-6" />
+						<MailIcon class="size-6 lg:size-7" />
 						appjavadev2019@gmail.com
 					</SocialPill>
 			</nav>
 		</SectionContainer>
-		<SectionContainer id="experience">
+		<SectionContainer id="experience" class="py-20 pb-10">
 			<h2 class="text-4xl font-bold mb-6 flex gap-x-3 items-center">
 				<Briefcase class="size-9"/>
-				Web Projects
+				Experience
 			</h2>
 			<Experience />
+		</SectionContainer>
+		<SectionContainer id="projects" class="py-20 pb-10">
+			<h2 class="text-4xl font-bold mb-6 flex gap-x-3 items-center">
+				<Code class="size-9"/>
+				Projects
+			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>
