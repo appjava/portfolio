@@ -5,7 +5,7 @@ const PROJECTS = [
         description: 'Web App to dimension domestic solar system',
         link: "https://solarpersonal.web.app",
         github: "https://github.com/appjava",
-        image: "public/projects/SolarApp.webp",
+        image: "projects/SolarApp.webp",
         tags: ["Solar", "App", "Energy"]
     },
     {
@@ -13,7 +13,7 @@ const PROJECTS = [
         description: 'Personal Blog for ecology and domotic style life',
         link: "https://echoprojects3d.web.app/",
         github: "https://github.com/appjava",
-        image: "public/projects/EchoHomeSpace.webp",
+        image: "projects/EchoHomeSpace.webp",
         tags: ["Domotic", "Ecology", "Sustainable"]
     },
 ]
@@ -22,20 +22,20 @@ const PROJECTS = [
 {
     PROJECTS.map(({ title, description, tags, image, link}) => (
         <article class="mt-12">
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
+            <h3 class="md:text-2xl text-2md font-semibold text-yellow-200 mb-2">
                 {title}
             </h3>
-            <p class="text-lg mb-4 text-pretty">
+            <p class="md:text-xl text-md mb-4 text-pretty">
                 {description}
             </p>
             <ul>
-                {tags.map(tag =>(
+                <!--{tags.map(tag =>(
                     <li>{tag}</li>
-                ))}
+                ))}-->
             </ul>
             <a href={link} target="_blank">
             <img 
-                class="rounded shadow-2xl shadow-white/15"
+                class="rounded-[12px] shadow-2xl shadow-white/15 w-full"
                 src={image} 
                 alt='Project Screenshot {image}' />
             </a>
