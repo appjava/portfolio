@@ -1,0 +1,17 @@
+
+---
+export interface Props {
+    title: string
+    link?: string
+}
+
+const { title, link } = Astro.props
+---
+
+        <img 
+            class="h-auto max-w-full rounded-lg" 
+            src={link}
+            alt={title} 
+        >
+
+

@@ -1,0 +1,73 @@
+---
+import SkillItems from "./SkillItems.astro"
+
+
+const SKILLS = [
+    {
+        title: "HTML",
+        link: "https://www.pcanytime.co.nz/assets/images/site/html5.png",
+    },
+    {
+        title: "CSS",
+        link: "https://pnghq.com/wp-content/uploads/css-logo-png-png-wallpaper-download-79166-768x768.png",
+    },
+    {
+        title: "JS",
+        link: "https://e7.pngegg.com/pngimages/640/199/png-clipart-javascript-logo-html-javascript-logo-angle-text.png",
+    },
+    {
+        title: "GIT",
+        link: "https://cdn.freebiesupply.com/logos/thumbs/2x/git-icon-logo.png",
+    },
+    {
+        title: "GITHUB",
+        link: "https://pngimg.com/uploads/github/github_PNG40.png",
+    },
+    {
+        title: "NODE",
+        link: "https://www.opencodez.com/wp-content/uploads/2018/09/node-logo.jpg",
+    },
+    {
+        title: "ELECTRON",
+        link: "https://download.logo.wine/logo/Electron_(software_framework)/Electron_(software_framework)-Logo.wine.png",
+    },
+    {
+        title: "ASTRO",
+        link: "",
+    },
+    {
+        title: "TAILWIND",
+        link: "",
+    },
+    {
+        title: "REACT",
+        link: "",
+    },
+    {
+        title: "PYTHON",
+        link: "",
+    },
+    {
+        title: "DJANGO",
+        link: "",
+    },
+    {
+        title: "ARDUINO",
+        link: "",
+    },
+    {
+        title: "ESP",
+        link: "",
+    },
+]
+---
+
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 ">
+    {
+        SKILLS.map(skills => (
+            <div>
+                <SkillItems {...skills} />
+            </div>
+        ))
+    }
+</div>
