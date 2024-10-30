@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import GitHubIcon from '../icons/GitHub.astro';
@@ -73,11 +72,14 @@ description='Web Development and IoT Projects'
 			<Projects />
 		</SectionContainer>
 		<SectionContainer id="skills" >
+			
 			<h2 class="text-2xl md:text-4xl font-bold mb-6 flex gap-x-3 items-center">
-				<Pill class="size-9 "/>
+				<Pill class="size-6 "/>
 				Skills
 			</h2>
+			<nav class="flex gap-3 mt-6 mb-12 flex-wrap justify-center">
 			<Skills />
+			</nav>
 		</SectionContainer>
 	</main>
 </Layout>
