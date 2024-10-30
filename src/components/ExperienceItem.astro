@@ -1,6 +1,11 @@
 ---
 import ExpPill from '../components/ExpPill.astro';
 import MoreIcon from '../icons/More.astro';
+import SocialPill from '../components/SocialPill.astro'
+import IconItem from "./IconItem.astro"
+import JsIcon from '../icons/Js.astro';
+import HtmlIcon from '../icons/Html.astro';
+import CssIcon from '../icons/Css.astro';
 
 export interface Props {
     title: string
@@ -19,18 +24,18 @@ const { title, description, link, date } = Astro.props
 <time 
     class="mb-1 text-sm font-normal leading-none text-sky-100/80"
     >{date}</time>
-<h3 
+<a href={link} target="_blank"><h3 
     class="text-lg font-semibold text-yellow-200 mt-3"
-    >{title}</h3>
+    >{title}</h3></a>
 <p 
     class="mb-4 text-base font-normal text-gray-200 text-pretty"
     >{description}</p>
-{
-    link && (
-    <ExpPill href={link} target="_blank" class="w-[120px]">
-        Ver {" "} 
-        <MoreIcon class="size-6 lg:size-7" />
-    </ExpPill>
-    )
-}
+	
+    <SocialPill>
+        <HtmlIcon class="size-6 lg:size-7" />
+        <CssIcon class="size-6 lg:size-7" />
+        <JsIcon class="size-6 lg:size-7" />
+    </SocialPill>
+
+
 

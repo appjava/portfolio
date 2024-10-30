@@ -1,5 +1,7 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
+import JsIcon from '../icons/Js.astro';
+import HtmlIcon from '../icons/Html.astro';
 
 
 const EXPERIENCIE = [
@@ -8,28 +10,32 @@ const EXPERIENCIE = [
         title: 'Creando prototipos de IoT y aplicaciones para gestion de energía renovable.',
         description: 'Domótica para el sector residencial y la agroindustria',
         link: "#projects",
-        tags: ["Arduino", "ESP32", "MicroPython", "ESP8266", "ESP01"]
+        tags: ["Arduino", "ESP32", "MicroPython", "ESP8266", "ESP01"],
+        icons: []
     },
     {
         date: 'Abril 2023',
         title: 'Tienda Virtual - PlantaZula',
         description: 'Muestra y venta de productos verdes, plantas y artesanías',
         link: "https://plantazula.pages.dev",
-        tags: ["LocalStorage", "Cart", "Form"]
+        tags: ["LocalStorage", "Cart", "Form"],
+        icons: ["JsIcon", "HtmlIcon"]
     },
     {
         date: 'Junio 2022',
         title: 'Página de Presentación - EchoGroup',
         description: 'Lanzamiento proyecto EchoGroup',
         link: "https://echogroup.pages.dev",
-        tags: ["Transitions", "Internationalize"]
+        tags: ["Transitions", "Internationalize"],
+        icons: []
     },
     {
         date: 'Enero 2022',
         title: 'Portafolio Servicios de Ingeniería - IngJAVA',
         description: 'Curriculum Vitae de proyectos de Ingeniería Hidromecánica',
         link: "https://ingjava.web.app",
-        tags: ["Engineering", "Simulation", "CAE"]
+        tags: ["Engineering", "Simulation", "CAE"],
+        icons: []
     },
 ]
 ---
@@ -41,6 +47,7 @@ const EXPERIENCIE = [
                 <li class="mb-10 ms-4">
                     <ExperienceItem {...experiencie} />
                 </li>
+                
             ))
     }
     
