@@ -1,7 +1,21 @@
 ---
+import Badge from '../components/Badge.astro';
 import ExperienceItem from "./ExperienceItem.astro"
 import JsIcon from '../icons/Js.astro';
 import HtmlIcon from '../icons/Html.astro';
+import CssIcon from '../icons/Css.astro';
+import NodeIcon from '../icons/Node.astro';
+import AstroIcon from '../icons/AstroIcon.astro';
+import PythonIcon from '../icons/Python.astro';
+import TailIcon from '../icons/Tail.astro';
+import ReactIcon from '../icons/React.astro';
+import BootIcon from '../icons/Boot.astro';
+import DjangoIcon from '../icons/Django.astro';
+import ArduinoIcon from '../icons/Arduino.astro';
+import EsphomeIcon from '../icons/Esphome.astro';
+import EspIcon from '../icons/Esp.astro';
+import MicroIcon from '../icons/Micro.astro';
+import BlenderIcon from '../icons/Blender.astro';
 
 
 const EXPERIENCIE = [
@@ -11,7 +25,7 @@ const EXPERIENCIE = [
         description: 'Domótica para el sector residencial y la agroindustria',
         link: "#projects",
         tags: ["Arduino", "ESP32", "MicroPython", "ESP8266", "ESP01"],
-        icons: []
+        Icons: [ArduinoIcon, EsphomeIcon, MicroIcon]
     },
     {
         date: 'Abril 2023',
@@ -19,7 +33,7 @@ const EXPERIENCIE = [
         description: 'Muestra y venta de productos verdes, plantas y artesanías',
         link: "https://plantazula.pages.dev",
         tags: ["LocalStorage", "Cart", "Form"],
-        icons: ["JsIcon", "HtmlIcon"]
+        Icons: [HtmlIcon, CssIcon, JsIcon]
     },
     {
         date: 'Junio 2022',
@@ -27,7 +41,7 @@ const EXPERIENCIE = [
         description: 'Lanzamiento proyecto EchoGroup',
         link: "https://echogroup.pages.dev",
         tags: ["Transitions", "Internationalize"],
-        icons: []
+        Icons: [ReactIcon, TailIcon]
     },
     {
         date: 'Enero 2022',
@@ -35,21 +49,34 @@ const EXPERIENCIE = [
         description: 'Curriculum Vitae de proyectos de Ingeniería Hidromecánica',
         link: "https://ingjava.web.app",
         tags: ["Engineering", "Simulation", "CAE"],
-        icons: []
+        Icons: [BootIcon]
     },
 ]
 ---
 
-
-<ol class="relative border-s border-gray-200 ml-3">                  
-    {
-            EXPERIENCIE.map(experiencie => (
+<ol class="relative border-s border-gray-200 ml-3"> 
+{
+    EXPERIENCIE.map(({date, title, description, link, tags, Icons}) => (
                 <li class="mb-10 ms-4">
-                    <ExperienceItem {...experiencie} />
-                </li>
-                
-            ))
-    }
-    
-</ol>
+                     <div 
+    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+>
+</div>
+<time 
+    class="mb-1 text-sm font-normal leading-none text-sky-100/80"
+    >{date}</time>
+<a href={link} target="_blank"><h3 
+    class="text-lg font-semibold text-yellow-200 mt-3"
+    >{title}</h3></a>
+<p 
+    class="mb-4 text-base font-normal text-gray-200 text-pretty"
+    >{description}</p>
+	
+<a href={link} target="_blank" ><Badge>Ver más</Badge></a>
 
+    </li>
+    
+    ))
+
+}
+</ol>
