@@ -1,6 +1,5 @@
 ---
 import Badge from '../components/Badge.astro';
-import ExperienceItem from "./ExperienceItem.astro"
 import JsIcon from '../icons/Js.astro';
 import HtmlIcon from '../icons/Html.astro';
 import CssIcon from '../icons/Css.astro';
@@ -25,7 +24,7 @@ const EXPERIENCIE = [
         description: 'Domótica para el sector residencial y la agroindustria',
         link: "#projects",
         tags: ["Arduino", "ESP32", "MicroPython", "ESP8266", "ESP01"],
-        Icons: [ArduinoIcon, EsphomeIcon, MicroIcon]
+        Icons: [ArduinoIcon, EsphomeIcon, MicroIcon, PythonIcon, EspIcon, BlenderIcon, DjangoIcon]
     },
     {
         date: 'Abril 2023',
@@ -33,7 +32,7 @@ const EXPERIENCIE = [
         description: 'Muestra y venta de productos verdes, plantas y artesanías',
         link: "https://plantazula.pages.dev",
         tags: ["LocalStorage", "Cart", "Form"],
-        Icons: [HtmlIcon, CssIcon, JsIcon]
+        Icons: [HtmlIcon, CssIcon, JsIcon, NodeIcon]
     },
     {
         date: 'Junio 2022',
@@ -49,14 +48,14 @@ const EXPERIENCIE = [
         description: 'Curriculum Vitae de proyectos de Ingeniería Hidromecánica',
         link: "https://ingjava.web.app",
         tags: ["Engineering", "Simulation", "CAE"],
-        Icons: [BootIcon]
+        Icons: [AstroIcon, BootIcon]
     },
 ]
 ---
 
 <ol class="relative border-s border-gray-200 ml-3"> 
 {
-    EXPERIENCIE.map(({date, title, description, link, tags, Icons}) => (
+    EXPERIENCIE.map(({date, title, description, link}) => (
                 <li class="mb-10 ms-4">
                      <div 
     class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
