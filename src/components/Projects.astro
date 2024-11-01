@@ -5,7 +5,7 @@ const PROJECTS = [
         description: 'Aplicación web para dimensionamiento energético de sistemas fotovoltáicos domésticos.  ',
         link: "https://solarpersonal.web.app",
         github: "https://github.com/appjava",
-        image: "projects/SolarApp.webp",
+        cover: "projects/SolarApp.webp",
         tags: ["Solar", "App", "Energy"]
     },
     {
@@ -13,14 +13,14 @@ const PROJECTS = [
         description: 'Blog personal sobre un estilo de vida ecológicamente confortable',
         link: "https://echoprojects3d.web.app/",
         github: "https://github.com/appjava",
-        image: "projects/EchoHomeSpace.webp",
+        cover: "projects/EchoHomeSpace.webp",
         tags: ["Domotic", "Ecology", "Sustainable"]
     },
 ]
 ---
 
 {
-    PROJECTS.map(({ title, description, image, link}) => (
+    PROJECTS.map(({ title, description, cover, link}) => (
         <article class="mt-12">
             <h3 class="md:text-2xl text-2md font-semibold text-yellow-200 mb-2">
                 {title}
@@ -36,8 +36,8 @@ const PROJECTS = [
             <a href={link} target="_blank">
             <img 
                 class="rounded-[12px] shadow-2xl shadow-white/15 w-full"
-                src={image} 
-                alt='Project Screenshot {image}' />
+                src={cover} 
+                alt='Project Screenshot {cover}' />
             </a>
         </article>
     ))

@@ -12,6 +12,9 @@ import Projects from '../components/Projects.astro';
 import Briefcase from '../icons/Briefcase.astro';
 import Pill from '../icons/Pill.astro';
 import Code from '../icons/Code.astro';
+import Profile from '../icons/Profile.astro';
+
+let meName = 'appjavadev';
 ---
 
 <Layout 
@@ -21,14 +24,11 @@ description='Web Development and IoT Projects'
 >
 	<main class="px-12">
 		<SectionContainer id="top" >
-			<img 
-				class="rounded-full size-12 md:size-20 lg:size-24 mb-4"
-				src="projects/profile.jpg" 
-				alt="AppJaVaDev Photo" 
-			/>
+			<Profile />
 			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-				Hola, soy appjavadev <a
-				href="#" 
+				Hola, soy <span class="text-yellow-200">{meName}</span>
+				<a
+				href="/" 
 				target="" 
 				rel="noopener"
 				class="flex justify-center items-center"
@@ -47,7 +47,7 @@ description='Web Development and IoT Projects'
 						<GitHubIcon class="size-6 lg:size-7" />
 						GitHub
 					</SocialPill>
-					<SocialPill href="#" >
+					<SocialPill href="https://www.linkedin.com" >
 						<LinkedlnIcon class="size-6 lg:size-7" />
 						Linkedln
 					</SocialPill>
@@ -73,9 +73,9 @@ description='Web Development and IoT Projects'
 		</SectionContainer>
 		<SectionContainer id="skills" >
 			
-			<h2 class="text-2xl md:text-4xl font-bold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-2xl md:text-4xl font-bold mb-[60px] mt-[30px] flex gap-x-3 items-center">
 				<Pill class="size-6 "/>
-				Destrezas
+				Destrezas Adquiridas
 			</h2>
 			<nav class="flex gap-3 mt-6 mb-12 flex-wrap justify-center">
 			<Skills />
