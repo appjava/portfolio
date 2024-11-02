@@ -23,7 +23,7 @@ const { description, title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+		<div class="absolute top-0 z-[-2] lg:h-3/4 sm:h-3/5 h-[600px] w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
 		<Header />
 		<slot />
 		<Footer />
@@ -43,7 +43,9 @@ const { description, title } = Astro.props;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		width: 95%;
 		min-height: 100vh;
+		margin: 0 auto;
 		
 	}
 
