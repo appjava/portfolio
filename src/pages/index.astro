@@ -5,6 +5,7 @@ import SectionContainer from '../components/SectionContainer.astro';
 import GitHubIcon from '../icons/GitHub.astro';
 import LinkedlnIcon from '../icons/Linkedln.astro';
 import MailIcon from '../icons/Mail.astro';
+import MastodonIcon from '../icons/Mastodon.astro';
 import SocialPill from '../components/SocialPill.astro'
 import Experience from '../components/Experience.astro';
 import Skills from '../components/Skills.astro';
@@ -45,15 +46,19 @@ description='Web Development and IoT Projects'
 			<nav class="flex gap-3 mt-6 flex-wrap">
 				
 					<SocialPill href="https://github.com/appjava">
-						<GitHubIcon class="size-6 lg:size-7" />
-						GitHub
+						<GitHubIcon class="size-5" />
+						
 					</SocialPill>
 					<SocialPill href="https://www.linkedin.com" >
-						<LinkedlnIcon class="size-6 lg:size-7" />
-						Linkedln
+						<LinkedlnIcon class="size-5" />
+						
+					</SocialPill>
+					<SocialPill href="https://mastodon.social/@appjavadev" >
+						<MastodonIcon class="size-5" />
+						
 					</SocialPill>
 					<SocialPill href="mailto:projects.appjavadev@gmail.com" >
-						<MailIcon class="size-6 lg:size-7" />
+						<MailIcon class="size-5" />
 						projects.appjavadev@gmail.com
 					</SocialPill>
 			</nav>
