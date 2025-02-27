@@ -6,23 +6,7 @@ const PROJECTS = [
         link: "https://solarpersonal.web.app",
         github: "https://github.com/appjava",
         cover: "projects/SolarApp.webp",
-        tags: ["Solar", "App", "Energy"]
-    },
-    {
-        title: 'EchoHome',
-        description: 'Blog personal sobre un estilo de vida ecológicamente confortable',
-        link: "https://echoprojects3d.web.app/",
-        github: "https://github.com/appjava",
-        cover: "projects/EchoHomeSpace.webp",
-        tags: ["Domotic", "Ecology", "Sustainable"]
-    },
-    {
-        title: 'meTV',
-        description: 'Reproductor mp4 y listas m3u8 desde el navegador',
-        link: "https://metv.pages.dev",
-        github: "https://github.com/appjava",
-        cover: "projects/meTV.webp",
-        tags: ["Iptv", "Player", "mp4", "m3u8"]
+        tags: ["HTML", "CSS", "JS"]
     },
     {
         title: 'Simple 3D Viewer',
@@ -30,14 +14,39 @@ const PROJECTS = [
         link: "https://simple3d.pages.dev",
         github: "https://github.com/appjava",
         cover: "projects/simple3D.webp",
-        tags: ["3D", "Model", "mtl", "obj", "Viewer"]
+        tags: ["HTML5", "ASTRO", "Tailwind"]
+    },
+    {
+        title: 'meTV',
+        description: 'Reproductor mp4 y listas m3u8 desde el navegador',
+        link: "https://metv.pages.dev",
+        github: "https://github.com/appjava",
+        cover: "projects/meTV.webp",
+        tags: ["HTML", "CSS", "JS", "Electron"]
+    },
+    {
+        title: 'EchoHome',
+        description: 'Proyecto sobre desarrollo sostenible y estilo vida ecológicamente confortable',
+        link: "https://echohome.pages.dev/",
+        github: "https://github.com/appjava",
+        cover: "projects/EchoHomeSpace.webp",
+        tags: ["HTML5", "Python", "Micropython", "Arduino", "EspHome", "C++", "HomeAssistant", 
+            "Blender", "OpenScad"]
+    },
+    {
+        title: 'Modelado 3D',
+        description: 'Proyectos de diseño y modelado 3D',
+        link: "https://echoprojects3d.web.app/",
+        github: "https://github.com/appjava",
+        cover: "projects/EchoHomeSpace.webp",
+        tags: ["HTML5", "SweetHome", "Blender", "OpenScad"]
     }
     
 ]
 ---
 
 {
-    PROJECTS.map(({ title, description, cover, link}) => (
+    PROJECTS.map(({ title, description, cover, link, tags}) => (
         <article class="mt-12">
             <h3 class="md:text-2xl text-2md font-semibold text-yellow-200 mb-2">
                 {title}
@@ -45,17 +54,18 @@ const PROJECTS = [
             <p class="md:text-xl text-md mb-4 text-pretty">
                 {description}
             </p>
-            <ul>
-                <!--{tags.map(tag =>(
-                    <li>{tag}</li>
-                ))}-->
-            </ul>
+            
             <a href={link} target="_blank">
             <img 
                 class="rounded-[12px] shadow-2xl shadow-white/15 w-full"
                 src={cover} 
                 alt='Project Screenshot {cover}' />
             </a>
+            <ul class="flex flex-wrap gap-x-3 gap-y-1 text-xs md:text-xl justify-center text-yellow-600 mt-3">
+                {tags.map(tag =>(
+                    <li>{tag}</li>
+                ))}
+            </ul>
         </article>
     ))
 }
