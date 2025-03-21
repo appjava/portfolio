@@ -15,7 +15,7 @@ import Pill from '../icons/Pill.astro';
 import Code from '../icons/Code.astro';
 import Profile from '../icons/Profile.astro';
 
-let meName = 'appjavadev';
+let meName = '[appjavadev]';
 ---
 
 <Layout 
@@ -28,7 +28,7 @@ description='Web Development and IoT Projects'
 			<Profile />
 			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
 				Hola, soy 
-				{meName}
+				<span class="text-yellow-200">{meName}</span>
 				<a
 				href="/" 
 				target="" 
@@ -38,24 +38,24 @@ description='Web Development and IoT Projects'
 					<Badge>Disponible</Badge>
 				</a>
 			</h1>
-			<h2 class="text-xl lg:text-2xl text-wrap max-w-[760px] min-w-[285px]">
-				Modelador 3D, Programador y Diseñador Mecatrónico. <span class="text-red-200/50">De Cali, Colombia.</span>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[750px] min-w-[285px]">
+				Desarrollador Web, Programador y Modelador 3D. <span class="text-red-200/50">De Cali, Colombia.</span>
 				Con experiencia en soluciones tecnológicas escalables, eficientes y sostenibles.
-				<span class="opacity-60">Especialista en energías renovables y desarrollo de prototipos mecatrónicos innovadores.
-				Enfocado en transformar ideas en productos funcionales y confiables que impulsen la sostenibilidad en el sector tecnológico.</span>
+				<span class="opacity-60">Enfocado en el desarrollo de prototipos mecatrónicos innovadores y 
+				en transformar ideas en productos funcionales y confiables que impulsen la sostenibilidad en el sector tecnológico.</span>
 			</h2>
 
 			<nav class="flex gap-3 mt-6 flex-wrap">
 				
-					<SocialPill href="https://github.com/appjava">
+					<SocialPill href="https://github.com/appjava" target="_blank">
 						<GitHubIcon class="size-5" />
 						
 					</SocialPill>
-					<SocialPill href="https://www.linkedin.com" >
+					<SocialPill href="https://www.linkedin.com/in/ingjava" target="_blank">
 						<LinkedlnIcon class="size-5" />
 						
 					</SocialPill>
-					<SocialPill href="https://mastodon.social/@appjavadev" >
+					<SocialPill href="https://mastodon.social/@appjavadev" target="_blank">
 						<MastodonIcon class="size-5" />
 						
 					</SocialPill>
