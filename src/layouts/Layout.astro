@@ -43,9 +43,7 @@ const { description, title } = Astro.props;
 		background-repeat: repeat;
 		background-size: cover;
 		background-attachment: fixed;
-		@media (max-width: 400px) {
-			background-size: auto;
-		}
+		
 		
 		display: flex;
 		flex-direction: column;
@@ -61,4 +59,10 @@ const { description, title } = Astro.props;
 			scroll-behavior: auto;
 		}
 	}
+	@media (max-width: 400px) {
+		body{
+			background-size: contain;
+		}
+			
+		}
 </style>
