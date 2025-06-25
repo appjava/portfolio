@@ -41,7 +41,7 @@ const { description, title } = Astro.props;
 		background-color : black;
 		background-image: url(/public/projects/circuit48.jpg);
 		background-repeat: repeat;
-		background-size: contain;
+		background-size: cover;
 		background-attachment: fixed;
 		background-position: center;
 		
@@ -57,6 +57,11 @@ const { description, title } = Astro.props;
 	@media (prefers-reduced-motion: reduce){
 		html{
 			scroll-behavior: auto;
+		}
+	}
+	@media (max-width: 540px) {
+		body{
+			background-size: contain;
 		}
 	}
 	
