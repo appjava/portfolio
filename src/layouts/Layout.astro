@@ -21,12 +21,16 @@ const { description, title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="projects/profile.jpg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+		
 	</head>
 	<body>
 		<!--<div class="absolute top-0 z-[-2] lg:h-[600px] sm:h-[120px] h-[780px] w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>-->
 		<Header />
 		<slot />
 		<Footer />
+		
+		 
 	</body>
 </html>
 <style is:global>
