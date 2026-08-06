@@ -1,0 +1,59 @@
+---
+import '@fontsource-variable/onest';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title = "appjava.dev — Estudio de Software Independiente", 
+  description = "Soluciones tecnológicas sostenibles. Aplicaciones nativas de pago único, 100% offline y privacidad local-first." 
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, "https://appjava.pages.dev");
+---
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  
+  <!-- SEO -->
+  <title>{title}</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="https://appjava.pages.dev/badges/amazon.png" />
+
+  <!-- Script de Inicialización de Idioma (Evita parpadeos) -->
+  <script is:inline>
+    const savedLang = localStorage.getItem('appjava_lang') || 'es';
+    document.documentElement.setAttribute('data-lang', savedLang);
+  </script>
+</head>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen antialiased selection:bg-purple-600 selection:text-white font-sans">
+  <slot />
+</body>
+</html>
+
+<style is:global>
+  html {
+    font-family: 'Onest Variable', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #09090b;
+  }
+  /* Motor Bilingüe */
+  html[data-lang="en"] [data-lang-es] { display: none !important; }
+  html[data-lang="es"] [data-lang-en] { display: none !important; }
+</style>

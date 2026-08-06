@@ -1,0 +1,338 @@
+---
+import SofiLayout from '../../layouts/SofiLayout.astro';
+---
+
+<SofiLayout 
+  title="SofiCash — Toma el Control de tu Dinero Universitario sin Estrés | appjava.dev"
+  description="El gestor de gastos definitivo para estudiantes y jóvenes profesionales. Separa tus finanzas personales de las académicas, evita pagos atrasados y protege tu privacidad."
+>
+  <!-- FONDO OBSIDIANA OSCURO -->
+  <main class="max-w-6xl mx-auto px-6 py-12 flex flex-col gap-24 relative z-10 text-zinc-100">
+    
+    <!-- HEADER Y CONMUTADOR BILINGÜE -->
+    <nav class="flex justify-between items-center py-4 border-b border-zinc-800">
+      <a href="/" class="text-xs font-black uppercase tracking-wider text-zinc-400 hover:text-white transition flex items-center gap-2">
+        <span>←</span>
+        <span data-lang-es>Volver al Portal appjava.dev</span>
+        <span data-lang-en>Back to appjava.dev Portal</span>
+      </a>
+
+      <div class="bg-zinc-900 p-1 rounded-full flex gap-1 border border-zinc-800 text-[11px] font-bold text-zinc-300">
+        <button class="lang-btn px-3 py-1 rounded-full transition-all duration-300" data-target="es">ES</button>
+        <button class="lang-btn px-3 py-1 rounded-full transition-all duration-300" data-target="en">EN</button>
+      </div>
+    </nav>
+
+    <!-- HERO PRINCIPAL CON ICONO OFICIAL Y BADGES DE TIENDAS -->
+    <section class="bg-gradient-to-br from-purple-950/90 via-zinc-900 to-zinc-900 border border-purple-500/30 p-8 md:p-14 rounded-[40px] shadow-2xl relative overflow-hidden">
+      <div class="grid md:grid-cols-12 gap-12 items-center relative z-10">
+        
+        <!-- COLUMNA TEXTO CON VALOR EMOCIONAL -->
+        <div class="md:col-span-6 space-y-8">
+          <div class="flex items-center space-x-4">
+            <!-- ICONO OFICIAL DE SOFICASH -->
+            <img src="/assets/icon-gradient.png" alt="SofiCash Icon" class="w-16 h-16 rounded-2xl shadow-lg shadow-purple-500/30 object-cover" />
+            
+            <div>
+              <h1 class="text-4xl md:text-5xl font-black tracking-tighter uppercase leading-none text-white">SofiCash</h1>
+              <p class="text-xs font-black uppercase tracking-widest text-purple-400 mt-1">
+                <span data-lang-es>Control de Gastos Sin Estrés</span>
+                <span data-lang-en>Stress-Free Budget Tracker</span>
+              </p>
+            </div>
+          </div>
+
+          <p class="text-2xl md:text-3xl font-bold tracking-tight text-purple-200 leading-tight">
+            <span data-lang-es>Domina tu dinero universitario. Separa tu presupuesto y di adiós a las sorpresas a fin de mes.</span>
+            <span data-lang-en>Master your college money. Separate your budget and say goodbye to month-end surprises.</span>
+          </p>
+
+          <p class="text-base font-medium leading-relaxed text-zinc-300">
+            <span data-lang-es>
+              Olvídate de las hojas de cálculo complicadas. SofiCash organiza tus finanzas en segundos, protege el dinero de tus cuotas universitarias para que no te lo gastes por error y te recuerda tus pagos a tiempo. Todo 100% privado y sin un solo anuncio molesto.
+            </span>
+            <span data-lang-en>
+              Forget complicated spreadsheets. SofiCash organizes your finances in seconds, protects your tuition funds so you don't spend them by mistake, and reminds you of payments on time. 100% private with zero ads.
+            </span>
+          </p>
+
+          <!-- TIENDAS DE DESCARGA OFICIAL Y PROXIMAMENTE EN GOOGLE PLAY -->
+          <div class="space-y-4 pt-2">
+            <p class="text-xs font-black uppercase tracking-wider text-pink-300">
+              <span data-lang-es>🔥 Disponible en tiendas oficiales:</span>
+              <span data-lang-en>🔥 Available on official stores:</span>
+            </p>
+            <div class="flex flex-wrap gap-4 items-center">
+              <a href="https://appgallery.cloud.huawei.com/ag/n/app/C117722731" target="_blank" class="hover:scale-105 transition">
+                <img src="/badges/huawei.png" alt="Huawei AppGallery" class="h-11 w-auto rounded-md shadow-lg" />
+              </a>
+              <a href="https://www.amazon.com/gp/product/B0H1DM938C" target="_blank" class="hover:scale-105 transition">
+                <img src="/badges/amazon.png" alt="Amazon Appstore" class="h-11 w-auto rounded-md shadow-lg" />
+              </a>
+              <a href="https://apps.microsoft.com/store/detail/9P5G4FND54F4" target="_blank" class="hover:scale-105 transition">
+                <img src="/badges/microsoft.png" alt="Microsoft Store" class="h-11 w-auto rounded-md shadow-lg" />
+              </a>
+
+              <!-- BADGE DE GOOGLE PLAY DESACTIVADO / PRUEBAS CERRADAS -->
+              <div data-lang-en class="opacity-40 grayscale select-none cursor-help hover:opacity-60 transition duration-300 relative group" title="Coming soon to Google Play (Closed Testing Phase)">
+                <img src="/badges/google-play.png" alt="Get it on Google Play (Próximamente)" class="h-11 w-auto rounded-md shadow-md" />
+              </div>
+              <div data-lang-es class="opacity-40 grayscale select-none cursor-help hover:opacity-60 transition duration-300 relative group" title="Próximamente en Google Play (Fase de Pruebas Cerradas)">
+                <img src="/badges/google-play.png" alt="Get it on Google Play (Próximamente)" class="h-11 w-auto rounded-md shadow-md" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIMULADOR INTERACTIVO DE PANTALLA -->
+        <div class="md:col-span-6 flex flex-col items-center justify-center">
+          <div class="relative mx-auto border-zinc-800 bg-zinc-950 border-[12px] rounded-[48px] h-[520px] w-[260px] shadow-2xl overflow-hidden ring-1 ring-white/20">
+            <div class="absolute top-2 left-1/2 -translate-x-1/2 h-4 w-20 bg-black rounded-full z-30"></div>
+            
+            <div class="rounded-[36px] overflow-hidden w-full h-full bg-zinc-900 relative">
+              <img src="/assets/screenshots/dashboard.png" id="screen-dashboard" class="screen-img absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-100 z-10" alt="Dashboard" />
+              <img src="/assets/screenshots/add-expense.png" id="screen-add-expense" class="screen-img absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 z-10" alt="Add Expense" />
+              <img src="/assets/screenshots/study-log.png" id="screen-study-log" class="screen-img absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 z-10" alt="Study Log" />
+              <img src="/assets/screenshots/backup.png" id="screen-backup" class="screen-img absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 z-10" alt="Backup" />
+            </div>
+          </div>
+
+          <!-- BOTONES DEL SIMULADOR -->
+          <div class="flex flex-wrap justify-center gap-2 mt-6 bg-black/60 p-1.5 rounded-full border border-white/10">
+            <button class="screen-trigger px-3 py-1 bg-white text-zinc-950 text-xs font-bold rounded-full transition" data-target="dashboard">Dashboard</button>
+            <button class="screen-trigger px-3 py-1 bg-white/10 text-white text-xs font-bold rounded-full transition" data-target="add-expense">
+              <span data-lang-es>Registrar Gasto</span><span data-lang-en>Add Expense</span>
+            </button>
+            <button class="screen-trigger px-3 py-1 bg-white/10 text-white text-xs font-bold rounded-full transition" data-target="study-log">
+              <span data-lang-es>Cuotas & Estudio</span><span data-lang-en>Study & Fees</span>
+            </button>
+            <button class="screen-trigger px-3 py-1 bg-white/10 text-white text-xs font-bold rounded-full transition" data-target="backup">
+              <span data-lang-es>Mis Datos</span><span data-lang-en>My Data</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BENEFICIOS REALES PARA EL USUARIO -->
+    <section class="space-y-10">
+      <div class="border-b border-zinc-800 pb-6 space-y-2">
+        <p class="text-xs font-black uppercase tracking-widest text-purple-400">
+          <span data-lang-es>Diseñado para tu Paz Mental</span>
+          <span data-lang-en>Designed for Peace of Mind</span>
+        </p>
+        <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tight text-white">
+          <span data-lang-es>¿Por qué SofiCash cambia tu Vida Universitaria?</span>
+          <span data-lang-en>Why SofiCash Changes Your College Life</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- BENEFICIO 1 -->
+        <div class="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 space-y-4 shadow-xl">
+          <div class="w-12 h-12 bg-purple-500/10 border border-purple-500/20 rounded-2xl flex items-center justify-center text-2xl text-purple-400 font-bold">
+            🛡️
+          </div>
+          <h3 class="text-xl font-black uppercase text-white">
+            <span data-lang-es>Bolsillos Separados</span>
+            <span data-lang-en>Separated Pockets</span>
+          </h3>
+          <p class="text-sm text-zinc-300 leading-relaxed font-medium">
+            <span data-lang-es>
+              Separa tu dinero de salir con amigos de los fondos para tus copias, libros y matrícula. Sabrás con certeza cuánto tienes libre sin gastarte lo del semestre.
+            </span>
+            <span data-lang-en>
+              Separate your weekend money from your tuition, books, and printing funds. Know exactly what you can spend freely without putting your semester at risk.
+            </span>
+          </p>
+        </div>
+
+        <!-- BENEFICIO 2 -->
+        <div class="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 space-y-4 shadow-xl">
+          <div class="w-12 h-12 bg-pink-500/10 border border-pink-500/20 rounded-2xl flex items-center justify-center text-2xl text-pink-400 font-bold">
+            ⏰
+          </div>
+          <h3 class="text-xl font-black uppercase text-white">
+            <span data-lang-es>Cero Cuotas Olvidadas</span>
+            <span data-lang-en>Zero Missed Payments</span>
+          </h3>
+          <p class="text-sm text-zinc-300 leading-relaxed font-medium">
+            <span data-lang-es>
+              Programa recordatorios automáticos para tus pagos universitarios. Recibe notificaciones discretas directamente en tu teléfono antes de la fecha límite.
+            </span>
+            <span data-lang-en>
+              Schedule automatic reminders for tuition installments. Get discreet notifications directly on your phone before deadlines arrive.
+            </span>
+          </p>
+        </div>
+
+        <!-- BENEFICIO 3 -->
+        <div class="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 space-y-4 shadow-xl">
+          <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl flex items-center justify-center text-2xl text-emerald-400 font-bold">
+            ⚡
+          </div>
+          <h3 class="text-xl font-black uppercase text-white">
+            <span data-lang-es>Registro en 3 Segundos</span>
+            <span data-lang-en>3-Second Expense Logging</span>
+          </h3>
+          <p class="text-sm text-zinc-300 leading-relaxed font-medium">
+            <span data-lang-es>
+              Registra un café, el bus o un almuerzo en tres toques rápidos con una vibración táctil satisfactoria. Y si hoy ahorraste, presiona "Hoy no gasté" y celebra tu racha.
+            </span>
+            <span data-lang-en>
+              Log a coffee, bus ticket, or lunch in three quick taps with a satisfying haptic vibration. If you saved today, tap "No Spend Today" to keep your streak alive.
+            </span>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RAZONES PARA ELEGIR SOFICASH -->
+    <section class="bg-gradient-to-r from-zinc-900 via-zinc-900 to-purple-950/40 rounded-[36px] p-8 md:p-12 border border-zinc-800 space-y-8 shadow-2xl">
+      <div class="max-w-2xl space-y-3">
+        <span class="text-xs font-black uppercase tracking-widest text-purple-400">
+          <span data-lang-es>Nuestra Promesa Ética</span>
+          <span data-lang-en>Our Ethical Promise</span>
+        </span>
+        <h2 class="text-3xl md:text-4xl font-black uppercase text-white">
+          <span data-lang-es>Un Pago Único. Tus Datos se Quedan Contigo.</span>
+          <span data-lang-en>One-Time Purchase. Your Data Stays with You.</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 text-sm font-medium">
+        <div class="space-y-2">
+          <p class="font-bold text-white flex items-center gap-2">
+            <span>🔒</span>
+            <span data-lang-es>100% Privado y Funciona Sin Internet</span>
+            <span data-lang-en>100% Private & Works Offline</span>
+          </p>
+          <p class="text-zinc-400 leading-relaxed">
+            <span data-lang-es>Toda tu información financiera se guarda únicamente en la memoria de tu teléfono. No requerimos crear cuentas, no vendemos tus datos y funciona en la biblioteca o en el bus sin gastar tus datos móviles.</span>
+            <span data-lang-en>All financial records stay strictly in your phone's local memory. No accounts required, no data tracking, and works 100% offline anywhere.</span>
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <p class="font-bold text-white flex items-center gap-2">
+            <span>💎</span>
+            <span data-lang-es>Sin Suscripciones Mensuales Repetitivas</span>
+            <span data-lang-en>No Recurring Subscriptions</span>
+          </p>
+          <p class="text-zinc-400 leading-relaxed">
+            <span data-lang-es>Detestamos pagar mensualidades por aplicaciones sencillas. Pagas una sola vez y la aplicación es tuya para siempre con todas sus actualizaciones de seguridad.</span>
+            <span data-lang-en>We hate monthly fees for simple utilities. Pay once and the application is yours forever, including all updates.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER FINAL DE CONVERSIÓN CON BADGE PRÓXIMAMENTE EN GOOGLE PLAY -->
+    <section class="bg-gradient-to-tr from-purple-900 to-indigo-950 rounded-[40px] p-8 md:p-14 text-center space-y-6 border border-purple-500/30 shadow-2xl">
+      <h2 class="text-3xl md:text-5xl font-black uppercase text-white">
+        <span data-lang-es>Comienza a Organizar tu Dinero Hoy</span>
+        <span data-lang-en>Start Organizing Your Money Today</span>
+      </h2>
+      <p class="text-zinc-300 max-w-xl mx-auto text-base font-medium">
+        <span data-lang-es>Únete a los estudiantes que gestionan sus finanzas con tranquilidad y privacidad absoluta.</span>
+        <span data-lang-en>Join students managing their finances with complete peace of mind and total privacy.</span>
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4 pt-4">
+        <a href="https://appgallery.cloud.huawei.com/ag/n/app/C117722731" target="_blank" class="hover:scale-105 transition">
+          <img src="/badges/huawei.png" alt="Huawei AppGallery" class="h-12 w-auto rounded-md shadow-lg" />
+        </a>
+        <a href="https://www.amazon.com/gp/product/B0H1DM938C" target="_blank" class="hover:scale-105 transition">
+          <img src="/badges/amazon.png" alt="Amazon Appstore" class="h-12 w-auto rounded-md shadow-lg" />
+        </a>
+        <a href="https://apps.microsoft.com/store/detail/9P5G4FND54F4" target="_blank" class="hover:scale-105 transition">
+          <img src="/badges/microsoft.png" alt="Microsoft Store" class="h-12 w-auto rounded-md shadow-lg" />
+        </a>
+
+        <!-- GOOGLE PLAY EN PRUEBAS CERRADAS -->
+        <div data-lang-en class="opacity-40 grayscale select-none cursor-help hover:opacity-60 transition duration-300" title="Coming soon to Google Play (Closed Testing Phase)">
+          <img src="/badges/google-play.png" alt="Get it on Google Play (Próximamente)" class="h-12 w-auto rounded-md shadow-md" />
+        </div>
+        <div data-lang-es class="opacity-40 grayscale select-none cursor-help hover:opacity-60 transition duration-300" title="Próximamente en Google Play (Fase de Pruebas Cerradas">
+          <img src="/badges/google-play.png" alt="Get it on Google Play (Próximamente)" class="h-12 w-auto rounded-md shadow-md" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pt-12 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-zinc-500">
+      <div class="space-y-1 text-center md:text-left">
+        <p data-lang-es class="font-bold text-zinc-300">Copyright © 2026 appjava.dev. Todos los derechos reservados.</p>
+        <p data-lang-en class="font-bold text-zinc-300">Copyright © 2026 appjava.dev. All rights reserved.</p>
+        <p data-lang-es>SofiCash es una marca registrada de appjava.dev.</p>
+        <p data-lang-en>SofiCash is a registered trademark of appjava.dev.</p>
+      </div>
+
+      <div class="flex gap-6 font-bold uppercase tracking-wider text-zinc-400">
+        <a href="/soficash/privacy" class="hover:text-white transition">
+          <span data-lang-es>Política de Privacidad</span><span data-lang-en>Privacy Policy</span>
+        </a>
+        <a href="/" class="hover:text-white transition">appjava.dev</a>
+      </div>
+    </footer>
+
+  </main>
+</SofiLayout>
+
+<script is:inline>
+  function setupInteractiveFeatures() {
+    const savedLang = localStorage.getItem('appjava_lang') || 'es';
+    
+    function updateUI(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        const target = btn.getAttribute('data-target');
+        if (target === lang) {
+          btn.classList.add('bg-purple-600', 'text-white');
+          btn.classList.remove('text-zinc-400');
+        } else {
+          btn.classList.remove('bg-purple-600', 'text-white');
+          btn.classList.add('text-zinc-400');
+        }
+      });
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-target');
+        localStorage.setItem('appjava_lang', lang);
+        updateUI(lang);
+      });
+    });
+
+    updateUI(savedLang);
+
+    // INTERACTIVIDAD DEL SIMULADOR
+    const triggers = document.querySelectorAll('.screen-trigger');
+    const screens = document.querySelectorAll('.screen-img');
+
+    triggers.forEach(trigger => {
+      const activateScreen = () => {
+        const target = trigger.getAttribute('data-target');
+        screens.forEach(s => s.classList.replace('opacity-100', 'opacity-0'));
+        const targetScreen = document.getElementById(`screen-${target}`);
+        if (targetScreen) targetScreen.classList.replace('opacity-0', 'opacity-100');
+
+        triggers.forEach(t => {
+          t.classList.remove('bg-white', 'text-zinc-950');
+          t.classList.add('bg-white/10', 'text-white');
+        });
+        trigger.classList.remove('bg-white/10', 'text-white');
+        trigger.classList.add('bg-white', 'text-zinc-950');
+      };
+
+      trigger.addEventListener('mouseenter', activateScreen);
+      trigger.addEventListener('click', activateScreen);
+    });
+  }
+
+  setupInteractiveFeatures();
+</script>
