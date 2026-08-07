@@ -12,40 +12,44 @@ import StudioLayout from '../layouts/StudioLayout.astro';
 
   <main class="max-w-6xl mx-auto px-6 py-12 flex flex-col gap-28 relative z-10 text-zinc-100">
     
-    <!-- HEADER CRISTAL CON SELECCIÓN DE IDIOMA -->
-    <nav class="sticky top-6 z-50 flex justify-between items-center py-3.5 px-6 rounded-2xl bg-zinc-900/80 backdrop-blur-md border border-white/10 shadow-2xl">
-      <div class="flex items-center gap-3">
-        <div class="w-15 h-12 bg-gradient-to-tr from-purple-600 via-pink-500 to-indigo-600 rounded-xl flex items-center justify-center text-white font-black text-lg shadow-lg shadow-purple-500/30">
-          <img src="/favicon.svg" alt="appjavadev Icon" class="w-16 h-16 rounded-2xl shadow-lg shadow-purple-500/30 object-cover" />
+    <!-- HEADER CRISTAL CON NAVEGACIÓN Y CONMUTADOR BILINGÜE -->
+    <nav class="sticky top-6 z-50 flex justify-between items-center py-3.5 px-6 rounded-2xl bg-zinc-900/90 backdrop-blur-md border border-white/10 shadow-2xl">
+      <div class="flex items-center gap-3 shrink-0">
+        <div class="w-9 h-9 bg-gradient-to-tr from-purple-600 via-pink-500 to-indigo-600 rounded-xl flex items-center justify-center text-white font-black text-lg shadow-lg shadow-purple-500/30">
+          a
         </div>
-        <span class="font-black text-lg tracking-tight uppercase">appjava<span class="text-emerald-400">.dev</span></span>
+        <span class="font-black text-lg tracking-tight uppercase">appjava<span class="text-purple-400">.dev</span></span>
       </div>
 
-      <div class="flex items-center gap-8">
-        <div class="hidden md:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-zinc-400">
-          <a href="#ecosistemas" class="hover:text-purple-400 transition">
-            <span data-lang-es>Ecosistemas</span><span data-lang-en>Ecosystems</span>
+      <div class="flex items-center gap-6">
+        <div class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-zinc-400">
+          <a href="#sofisuite" class="hover:text-purple-400 transition">
+            <span data-lang-es>SofiSuite</span><span data-lang-en>SofiSuite</span>
           </a>
-          <a href="#energia-iot" class="hover:text-purple-400 transition">
-            <span data-lang-es>IoT & Energía</span><span data-lang-en>IoT & Energy</span>
+          <a href="#echohome" class="hover:text-purple-400 transition">
+            <span data-lang-es>EchoHome IoT</span><span data-lang-en>EchoHome IoT</span>
           </a>
-          <a href="#simulacion" class="hover:text-purple-400 transition">
-            <span data-lang-es>Simulación & 3D</span><span data-lang-en>Simulation & 3D</span>
+          <a href="#b2b" class="hover:text-purple-400 transition">
+            <span data-lang-es>Servicios B2B</span><span data-lang-en>B2B Services</span>
           </a>
-          <a href="#manifiesto" class="hover:text-purple-400 transition">
-            <span data-lang-es>Manifiesto</span><span data-lang-en>Manifesto</span>
+          <a href="#proyectos" class="hover:text-purple-400 transition">
+            <span data-lang-es>Proyectos</span><span data-lang-en>Projects</span>
           </a>
         </div>
 
-        <div class="bg-zinc-800/80 p-1 rounded-full flex gap-1 border border-zinc-700/80 text-[11px] font-bold text-zinc-300">
+        <button data-open-modal="Consultoría General B2B" class="hidden sm:inline-block px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-black text-xs uppercase tracking-wider rounded-xl hover:opacity-90 transition shadow-lg shadow-purple-500/20 whitespace-nowrap">
+          <span data-lang-es>Contratar / Licencias 🛒</span><span data-lang-en>Hire / Licenses 🛒</span>
+        </button>
+
+        <div class="bg-zinc-800/80 p-1 rounded-full flex gap-1 border border-zinc-700/80 text-[11px] font-bold text-zinc-300 shrink-0">
           <button class="lang-btn px-3 py-1 rounded-full transition-all duration-300" data-target="es">ES</button>
           <button class="lang-btn px-3 py-1 rounded-full transition-all duration-300" data-target="en">EN</button>
         </div>
       </div>
     </nav>
 
-    <!-- HERO PRINCIPAL BILINGÜE -->
-    <section class="space-y-8 max-w-4xl pt-8">
+    <!-- HERO PRINCIPAL DE ESTUDIO BILINGÜE -->
+    <section class="space-y-8 max-w-4xl pt-8 relative z-10 scroll-mt-36">
       <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-black uppercase tracking-widest shadow-inner">
         <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse shadow-[0_0_10px_#c084fc]"></span>
         <span data-lang-es>Estudio de Ingeniería & Soluciones Tecnológicas Sostenibles</span>
@@ -57,68 +61,107 @@ import StudioLayout from '../layouts/StudioLayout.astro';
         <span data-lang-en>Ingenuity over brute force.</span>
       </h1>
 
-      <p class="text-xl md:text-2xl font-medium text-zinc-400 leading-relaxed max-w-3xl">
+      <p class="text-xl md:text-2xl font-medium text-zinc-300 leading-relaxed max-w-3xl">
         <span data-lang-es>
-          Diseñamos e impulsamos soluciones tecnológicas multidisciplinarias. Unimos desarrollo de software de alta gama, ingeniería energética, mecatrónica y simulación digital bajo una premisa fundamental: el usuario es cliente, no producto.
+          Diseñamos e impulsamos soluciones tecnológicas multidisciplinarias. Unimos desarrollo de software de alta gama, licencias B2B, ingeniería energética y mecatrónica bajo una premisa fundamental: el usuario es cliente, no producto.
         </span>
         <span data-lang-en>
-          We design and build multidisciplinary technology solutions. We combine high-end software development, energy engineering, mechatronics, and digital simulation under one core principle: the user is a customer, not a product.
+          We design and build multidisciplinary technology solutions. We combine high-end software, B2B licenses, renewable energy, and mechatronics under one core principle: the user is a customer, not a product.
         </span>
       </p>
 
-      <!-- BARRA DE MÉTRICAS -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6">
-        <div class="p-4 rounded-2xl bg-zinc-900/60 border border-white/5 backdrop-blur-sm space-y-1">
-          <p class="text-2xl font-black text-purple-400">+10</p>
-          <p class="text-[10px] font-black uppercase tracking-wider text-zinc-400">
-            <span data-lang-es>Proyectos & WebApps</span><span data-lang-en>Projects & WebApps</span>
+      <!-- BOTONES DE ACCIÓN COMERCIAL DIRECTA EN HERO -->
+      <div class="flex flex-wrap items-center gap-4 pt-4">
+        <a href="#sofisuite" class="px-8 py-4 bg-white text-zinc-950 font-black text-xs uppercase tracking-wider rounded-2xl hover:bg-zinc-200 transition shadow-2xl flex items-center gap-2 whitespace-nowrap">
+          <span>🛒</span>
+          <span data-lang-es>Comprar Apps / Descargar ↓</span><span data-lang-en>Buy Apps / Download ↓</span>
+        </a>
+        <button data-open-modal="Cotización de Proyecto Especializado" class="px-8 py-4 bg-zinc-900 border border-zinc-700 text-white font-black text-xs uppercase tracking-wider rounded-2xl hover:bg-zinc-800 transition flex items-center gap-2 whitespace-nowrap">
+          <span>💼</span>
+          <span data-lang-es>Cotizar Consultoría / B2B ↗</span><span data-lang-en>B2B Quote / Services ↗</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ESTÁNDARES DE INGENIERÍA DEL ESTUDIO -->
+    <section class="space-y-8 scroll-mt-36 pt-6">
+      <div class="border-b border-zinc-800 pb-4 space-y-2">
+        <span class="text-xs font-black uppercase tracking-widest text-purple-400">
+          <span data-lang-es>Nuestros Estándares de Desarrollo</span><span data-lang-en>Our Engineering Standards</span>
+        </span>
+        <h2 class="text-3xl md:text-4xl font-black uppercase text-white">
+          <span data-lang-es>Filosofía de Construcción de Software & Hardware</span>
+          <span data-lang-en>Software & Hardware Craftsmanship Philosophy</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="p-6 rounded-3xl bg-zinc-900/80 border border-zinc-800 space-y-3 overflow-hidden">
+          <div class="text-2xl">⚡</div>
+          <h3 class="font-black text-white text-sm md:text-base uppercase break-words leading-tight">
+            <span data-lang-es>Eficiencia de Recursos</span><span data-lang-en>Resource Efficiency</span>
+          </h3>
+          <p class="text-xs text-zinc-400 font-medium leading-relaxed">
+            <span data-lang-es>Optimizamos el consumo de memoria y procesador para prolongar la vida útil de los dispositivos.</span><span data-lang-en>We optimize memory and CPU footprint to extend device lifespan and battery health.</span>
           </p>
         </div>
-        <div class="p-4 rounded-2xl bg-zinc-900/60 border border-white/5 backdrop-blur-sm space-y-1">
-          <p class="text-2xl font-black text-emerald-400">100%</p>
-          <p class="text-[10px] font-black uppercase tracking-wider text-zinc-400">
-            <span data-lang-es>Soberanía & Ética Digital</span><span data-lang-en>Digital Sovereignty</span>
+
+        <div class="p-6 rounded-3xl bg-zinc-900/80 border border-zinc-800 space-y-3 overflow-hidden">
+          <div class="text-2xl">🔒</div>
+          <h3 class="font-black text-white text-sm md:text-base uppercase break-words leading-tight">
+            <span data-lang-es>Soberanía Digital</span><span data-lang-en>Digital Sovereignty</span>
+          </h3>
+          <p class="text-xs text-zinc-400 font-medium leading-relaxed">
+            <span data-lang-es>Priorizamos arquitecturas local-first y cifrado para garantizar el control total de los datos.</span><span data-lang-en>We prioritize local-first architecture and encryption to guarantee user data control.</span>
           </p>
         </div>
-        <div class="p-4 rounded-2xl bg-zinc-900/60 border border-white/5 backdrop-blur-sm space-y-1">
-          <p class="text-2xl font-black text-pink-400">Multi</p>
-          <p class="text-[10px] font-black uppercase tracking-wider text-zinc-400">
-            <span data-lang-es>Arquitectura Agnóstica</span><span data-lang-en>Agnostic Architecture</span>
+
+        <div class="p-6 rounded-3xl bg-zinc-900/80 border border-zinc-800 space-y-3 overflow-hidden">
+          <div class="text-2xl">🌱</div>
+          <h3 class="font-black text-white text-sm md:text-base uppercase break-words leading-tight">
+            <span data-lang-es>Sostenibilidad Ambiental</span><span data-lang-en>Environmental Sustainability</span>
+          </h3>
+          <p class="text-xs text-zinc-400 font-medium leading-relaxed">
+            <span data-lang-es>Integramos energías renovables y domótica eficiente con reducción comprobada del 75% en consumo.</span><span data-lang-en>We integrate renewable energy and smart domotics with a proven 75% consumption reduction.</span>
           </p>
         </div>
-        <div class="p-4 rounded-2xl bg-zinc-900/60 border border-white/5 backdrop-blur-sm space-y-1">
-          <p class="text-2xl font-black text-amber-400">0%</p>
-          <p class="text-[10px] font-black uppercase tracking-wider text-zinc-400">
-            <span data-lang-es>Obsolescencia Programada</span><span data-lang-en>Planned Obsolescence</span>
+
+        <div class="p-6 rounded-3xl bg-zinc-900/80 border border-zinc-800 space-y-3 overflow-hidden">
+          <div class="text-2xl">💎</div>
+          <h3 class="font-black text-white text-sm md:text-base uppercase break-words leading-tight">
+            <span data-lang-es>Modelos Transparentes</span><span data-lang-en>Transparent Business Models</span>
+          </h3>
+          <p class="text-xs text-zinc-400 font-medium leading-relaxed">
+            <span data-lang-es>Modelos de negocio éticos y claros, sin publicidad molesta ni cobros engañosos.</span><span data-lang-en>Clear, ethical business models without intrusive ads or hidden fees.</span>
           </p>
         </div>
       </div>
     </section>
 
-    <!-- DOMINIO 1: PRODUCTIVIDAD & SOFISUITE -->
-    <section id="ecosistemas" class="space-y-10">
+    <!-- DIVISIÓN 1: MÓVIL & PRODUCTIVIDAD (SofiSuite) -->
+    <section id="sofisuite" class="space-y-10 scroll-mt-36 pt-6">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-zinc-800/80 pb-6">
         <div class="space-y-2">
           <p class="text-xs font-black uppercase tracking-widest text-purple-400">
-            <span data-lang-es>Ecosistema Móvil & Productividad</span><span data-lang-en>Mobile & Productivity Ecosystem</span>
+            <span data-lang-es>División de Software Comercial</span><span data-lang-en>Commercial Mobile Apps</span>
           </p>
-          <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight text-white">SofiSuite</h2>
+          <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight text-white">Ecosistema SofiSuite</h2>
         </div>
         <p class="text-sm font-semibold text-zinc-400 max-w-md">
-          <span data-lang-es>Herramientas táctiles enfocadas en reducir el ruido cognitivo mediante almacenamiento local y máxima eficiencia.</span>
-          <span data-lang-en>Tactile tools focused on reducing cognitive noise through local storage and maximum efficiency.</span>
+          <span data-lang-es>Herramientas táctiles sin suscripciones ni publicidad. Descarga inmediata en tiendas oficiales.</span>
+          <span data-lang-en>Tactile tools with zero subscriptions or ads. Immediate download on official app stores.</span>
         </p>
       </div>
 
       <div class="grid md:grid-cols-12 gap-6">
         <!-- SOFICASH -->
-        <article class="md:col-span-7 group bg-gradient-to-br from-purple-950/60 via-zinc-900 to-zinc-900/90 rounded-[36px] p-8 border border-purple-500/20 hover:border-purple-500/50 transition-all duration-500 shadow-2xl flex flex-col justify-between space-y-8">
+        <article class="md:col-span-7 group bg-gradient-to-br from-purple-950/60 via-zinc-900 to-zinc-900/90 rounded-[36px] p-8 border border-purple-500/20 hover:border-purple-500/50 transition-all duration-500 shadow-2xl flex flex-col justify-between space-y-8 overflow-hidden">
           <div class="space-y-6">
-            <div class="flex items-center justify-between">
-              <span class="text-[10px] font-black uppercase tracking-widest bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3.5 py-1.5 rounded-full">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-purple-500/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded-full max-w-full truncate">
                 <span data-lang-es>Gestor Financiero</span><span data-lang-en>Financial Manager</span>
               </span>
-              <span class="text-xs font-black uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+              <span class="text-xs font-black uppercase tracking-wider text-emerald-400 flex items-center gap-1.5 shrink-0">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
                 <span data-lang-es>En Vivo</span><span data-lang-en>Live</span>
               </span>
@@ -135,21 +178,39 @@ import StudioLayout from '../layouts/StudioLayout.astro';
               <span data-lang-es>Separación de presupuestos por objetivos, recordatorios nativos de cuotas, seguimiento de racha financiera y respaldo de datos en la memoria local.</span>
               <span data-lang-en>Goal-based budget separation, native installment reminders, financial streak tracking, and local data backups.</span>
             </p>
+
+            <div class="pt-2 space-y-2">
+              <p class="text-[10px] font-black uppercase tracking-widest text-purple-300">
+                <span data-lang-es>Descargar / Comprar en tiendas oficiales:</span>
+                <span data-lang-en>Download / Buy on official stores:</span>
+              </p>
+              <div class="flex flex-wrap gap-3 items-center">
+                <a href="https://appgallery.cloud.huawei.com/ag/n/app/C117722731" target="_blank" class="hover:scale-105 transition">
+                  <img src="/badges/huawei.png" alt="Huawei AppGallery" class="h-8 w-auto rounded" />
+                </a>
+                <a href="https://www.amazon.com/gp/product/B0H1DM938C" target="_blank" class="hover:scale-105 transition">
+                  <img src="/badges/amazon.png" alt="Amazon Appstore" class="h-8 w-auto rounded" />
+                </a>
+                <a href="https://apps.microsoft.com/store/detail/9P5G4FND54F4" target="_blank" class="hover:scale-105 transition">
+                  <img src="/badges/microsoft.png" alt="Microsoft Store" class="h-8 w-auto rounded" />
+                </a>
+              </div>
+            </div>
           </div>
 
-          <a href="/soficash" class="px-6 py-3 bg-white text-zinc-950 rounded-2xl font-black text-xs uppercase tracking-wider hover:bg-pink-100 transition shadow-lg self-start">
-            <span data-lang-es>Explorar SofiCash →</span><span data-lang-en>Explore SofiCash →</span>
+          <a href="/soficash" class="px-6 py-3 bg-white text-zinc-950 rounded-2xl font-black text-xs uppercase tracking-wider hover:bg-pink-100 transition shadow-lg self-start whitespace-nowrap">
+            <span data-lang-es>Ver Detalles de SofiCash →</span><span data-lang-en>View SofiCash Details →</span>
           </a>
         </article>
 
         <!-- SOFIGRADES -->
-        <article class="md:col-span-5 group bg-gradient-to-br from-emerald-950/60 via-zinc-900 to-zinc-900/90 rounded-[36px] p-8 border border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-500 shadow-2xl flex flex-col justify-between space-y-8">
+        <article class="md:col-span-5 group bg-gradient-to-br from-emerald-950/60 via-zinc-900 to-zinc-900/90 rounded-[36px] p-8 border border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-500 shadow-2xl flex flex-col justify-between space-y-8 overflow-hidden">
           <div class="space-y-6">
-            <div class="flex items-center justify-between">
-              <span class="text-[10px] font-black uppercase tracking-widest bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-3.5 py-1.5 rounded-full">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-3 py-1 rounded-full max-w-full truncate">
                 <span data-lang-es>GPS Académico</span><span data-lang-en>Academic GPS</span>
               </span>
-              <span class="text-xs font-black uppercase tracking-wider text-emerald-400">
+              <span class="text-xs font-black uppercase tracking-wider text-emerald-400 shrink-0">
                 <span data-lang-es>● Producción</span><span data-lang-en>● Production</span>
               </span>
             </div>
@@ -165,21 +226,36 @@ import StudioLayout from '../layouts/StudioLayout.astro';
               <span data-lang-es>Calculadora de promedios ponderados. Muestra Puntos Asegurados y proyecta interactivamente las notas necesarias en Modo Supervivencia.</span>
               <span data-lang-en>Weighted GPA calculator. Displays Secured Points and interactively projects required exam scores in Survival Mode.</span>
             </p>
+
+            <div class="pt-2 space-y-2">
+              <p class="text-[10px] font-black uppercase tracking-widest text-emerald-300">
+                <span data-lang-es>Descargar / Comprar:</span>
+                <span data-lang-en>Download / Buy:</span>
+              </p>
+              <div class="flex flex-wrap gap-2 items-center">
+                <a href="https://appgallery.cloud.huawei.com/ag/n/app/C117722731" target="_blank" class="hover:scale-105 transition">
+                  <img src="/badges/huawei.png" alt="Huawei" class="h-8 w-auto rounded" />
+                </a>
+                <a href="https://www.amazon.com/gp/product/B0H1DM938C" target="_blank" class="hover:scale-105 transition">
+                  <img src="/badges/amazon.png" alt="Amazon" class="h-8 w-auto rounded" />
+                </a>
+              </div>
+            </div>
           </div>
 
-          <a href="/sofigrades" class="w-full py-3 bg-white text-zinc-950 rounded-2xl font-black text-xs uppercase tracking-wider text-center block hover:bg-emerald-100 transition shadow-lg">
-            <span data-lang-es>Explorar SofiGrades →</span><span data-lang-en>Explore SofiGrades →</span>
+          <a href="/sofigrades" class="w-full py-3 bg-white text-zinc-950 rounded-2xl font-black text-xs uppercase tracking-wider text-center block hover:bg-emerald-100 transition shadow-lg whitespace-nowrap">
+            <span data-lang-es>Ver Detalles de SofiGrades →</span><span data-lang-en>View SofiGrades Details →</span>
           </a>
         </article>
 
         <!-- SOFISTREAK -->
-        <article class="md:col-span-12 group bg-gradient-to-br from-amber-950/40 via-zinc-900 to-zinc-900/90 rounded-[36px] p-8 md:p-10 border border-amber-500/20 hover:border-amber-500/50 transition-all duration-500 shadow-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+        <article class="md:col-span-12 group bg-gradient-to-br from-amber-950/40 via-zinc-900 to-zinc-900/90 rounded-[36px] p-8 md:p-10 border border-amber-500/20 hover:border-amber-500/50 transition-all duration-500 shadow-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-8 overflow-hidden">
           <div class="space-y-4 max-w-2xl">
-            <div class="flex items-center gap-3">
-              <span class="text-[10px] font-black uppercase tracking-widest bg-amber-500/20 text-amber-300 border border-amber-500/30 px-3.5 py-1.5 rounded-full">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30 px-3 py-1 rounded-full max-w-full truncate">
                 <span data-lang-es>Disciplina & Hábitos</span><span data-lang-en>Discipline & Habits</span>
               </span>
-              <span class="text-xs font-black uppercase tracking-wider text-amber-400">
+              <span class="text-xs font-black uppercase tracking-wider text-amber-400 shrink-0">
                 <span data-lang-es>● Producción</span><span data-lang-en>● Production</span>
               </span>
             </div>
@@ -190,157 +266,168 @@ import StudioLayout from '../layouts/StudioLayout.astro';
             </p>
           </div>
 
-          <a href="/sofistreak" class="px-8 py-3.5 bg-white text-zinc-950 rounded-2xl font-black text-xs uppercase tracking-wider hover:bg-amber-100 transition shrink-0 shadow-lg">
-            <span data-lang-es>Explorar SofiStreak →</span><span data-lang-en>Explore SofiStreak →</span>
+          <a href="/sofistreak" class="px-8 py-3.5 bg-white text-zinc-950 rounded-2xl font-black text-xs uppercase tracking-wider hover:bg-amber-100 transition shrink-0 shadow-lg whitespace-nowrap">
+            <span data-lang-es>Ver Detalles de SofiStreak →</span><span data-lang-en>View SofiStreak Details →</span>
           </a>
         </article>
 
       </div>
     </section>
 
-    <!-- DOMINIO 2: ESCRITORIO & MULTIMEDIA -->
-    <section class="bg-gradient-to-r from-zinc-900 via-zinc-900 to-indigo-950/50 rounded-[40px] p-8 md:p-12 border border-zinc-800 space-y-8 shadow-2xl">
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+    <!-- DESTACADO ESPECIAL DE INGENIERÍA: ECHOHOME IOT CENTER -->
+    <section id="echohome" class="bg-gradient-to-r from-teal-950/80 via-zinc-900 to-zinc-900 rounded-[40px] p-8 md:p-14 border border-teal-500/30 space-y-8 shadow-2xl overflow-hidden scroll-mt-36 pt-6">
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
         <div class="max-w-2xl space-y-4">
-          <span class="text-xs font-black uppercase tracking-widest text-indigo-400">
-            <span data-lang-es>División de Software de Escritorio</span><span data-lang-en>Desktop Software Division</span>
-          </span>
-          <h2 class="text-4xl font-black uppercase tracking-tight text-white">meTV+ Player</h2>
-          <p class="text-zinc-400 text-base font-medium leading-relaxed">
-            <span data-lang-es>Reproductor multimedia ultraligero diseñado para contenido M3U y video MP4. Compilado con Tauri y Rust para macOS y Linux AppImage, además de versión Web App.</span>
-            <span data-lang-en>Ultralight multimedia player designed for M3U and MP4 media. Built with Tauri and Rust for macOS and Linux AppImage, plus Web App.</span>
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-teal-500/20 text-teal-300 border border-teal-500/30 px-3 py-1 rounded-full max-w-full truncate">
+              <span data-lang-es>Hábitat Sustentable & Domótica</span><span data-lang-en>Sustainable Habitat & Domotics</span>
+            </span>
+            <span class="text-xs font-mono text-teal-400 font-bold shrink-0">100% Fuentes Renovables</span>
+          </div>
+
+          <h2 class="text-4xl font-black uppercase text-white">EchoHome IoT Center</h2>
+          
+          <p class="text-zinc-300 text-base font-medium leading-relaxed">
+            <span data-lang-es>
+              Modelo de vida sostenible que integra agroecología, microredes de energías limpias (solar, eólica, hidráulica) y un servidor domótico local en Python/Termux. Logra un <strong>75% de reducción energética</strong> y un <strong>50% de ahorro en servicios públicos</strong>.
+            </span>
+            <span data-lang-en>
+              Sustainable habitat model integrating agroecology, clean microgrids (solar, wind, hydro), and a local Python/Termux automation server. Achieves a <strong>75% energy reduction</strong> and <strong>50% utility savings</strong>.
+            </span>
           </p>
+
+          <div class="flex flex-wrap gap-4 text-xs font-mono text-zinc-400">
+            <span>⚡ -75% Consumo Energético</span>
+            <span>💰 -50% Costo Servicios</span>
+            <span>🌱 Agroecología & Solar</span>
+          </div>
         </div>
 
-        <a href="/metv" class="px-8 py-4 bg-white text-zinc-950 rounded-2xl font-black text-xs uppercase tracking-wider hover:bg-zinc-200 transition shrink-0 shadow-lg">
-          <span data-lang-es>Explorar meTV+ →</span><span data-lang-en>Explore meTV+ →</span>
-        </a>
+        <div class="flex flex-col sm:flex-row gap-4 shrink-0">
+          <a href="/echohome" class="px-8 py-4 bg-teal-400 text-zinc-950 font-black text-xs uppercase tracking-wider rounded-2xl hover:bg-teal-300 transition shadow-lg text-center whitespace-nowrap">
+            <span data-lang-es>Explorar Proyecto EchoHome →</span><span data-lang-en>Explore EchoHome Project →</span>
+          </a>
+          <button data-open-modal="Consultoría Hábitat Sustentable EchoHome" class="px-6 py-4 bg-zinc-800 text-white font-black text-xs uppercase tracking-wider rounded-2xl hover:bg-zinc-700 transition border border-zinc-700 text-center whitespace-nowrap">
+            <span data-lang-es>Consultoría Hábitat ↗</span><span data-lang-en>Habitat Consulting ↗</span>
+          </button>
+        </div>
       </div>
     </section>
 
-    <!-- DOMINIO 3: DOMÓTICA & IOT -->
-    <section id="energia-iot" class="space-y-10">
+    <!-- SECCIÓN B2B & SERVICIOS COMERCIALES -->
+    <section id="b2b" class="space-y-10 scroll-mt-36 pt-6">
       <div class="border-b border-zinc-800/80 pb-6 space-y-2">
         <span class="text-xs font-black uppercase tracking-widest text-teal-400">
-          <span data-lang-es>División de Hardware & Domótica</span><span data-lang-en>Hardware & Domotics Division</span>
+          <span data-lang-es>Servicios Comerciales B2B & Consultoría</span><span data-lang-en>B2B Commercial Services & Consulting</span>
         </span>
         <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight text-white">
-          <span data-lang-es>Sistemas Embebidos & IoT</span><span data-lang-en>Embedded Systems & IoT</span>
+          <span data-lang-es>Soluciones para Empresas e Ingenieros</span><span data-lang-en>Enterprise & Engineering Solutions</span>
         </h2>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- ECHOHOME IOT -->
-        <article class="bg-zinc-900/80 rounded-[36px] p-8 border border-zinc-800/80 hover:border-zinc-700 transition duration-300 flex flex-col justify-between space-y-6">
+        <!-- SOLAR PERSONAL B2B PRO -->
+        <article class="bg-gradient-to-br from-amber-950/60 via-zinc-900 to-zinc-900 rounded-[36px] p-8 border border-amber-500/30 flex flex-col justify-between space-y-6 overflow-hidden">
           <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="text-[10px] font-black uppercase tracking-widest bg-zinc-800 px-3.5 py-1.5 rounded-full text-zinc-300">
-                <span data-lang-es>Domótica & Servidor Local</span><span data-lang-en>Domotics & Local Server</span>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30 px-3 py-1 rounded-full max-w-full truncate">
+                Software B2B Fotovoltaico • Licencia Pro
               </span>
-              <span class="text-xs font-mono text-zinc-500">Python / ESP8266 / C++</span>
             </div>
-            <h3 class="text-2xl font-black uppercase text-white">EchoHome IoT Center</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed font-medium">
-              <span data-lang-es>Centro de control para automatización residencial con servidor local en Python, accesible desde dispositivos móviles y microcontroladores de bajo costo sin depender de la nube.</span>
-              <span data-lang-en>Residential home automation control center with a local Python server, accessible from low-cost microcontrollers without cloud dependencies.</span>
+            <h3 class="text-2xl font-black uppercase text-white">Solar Personal App Pro</h3>
+            <p class="text-sm text-zinc-300 leading-relaxed font-medium">
+              <span data-lang-es>Diseñada para empresas e instaladores solares independientes. Genera reportes de dimensionamiento técnico y cotizaciones comerciales en PDF con el logo de tu empresa listas para cliente final.</span>
+              <span data-lang-en>Designed for solar installers and firms. Generates branded technical photovoltaic proposals and commercial PDF quotes for end clients.</span>
             </p>
           </div>
 
-          <a href="/echohome" class="px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-white rounded-2xl font-black text-xs uppercase tracking-wider transition self-start">
-            <span data-lang-es>Explorar EchoHome →</span><span data-lang-en>Explore EchoHome →</span>
-          </a>
+          <button data-open-modal="Licencia Pro Solar Personal App B2B" class="px-6 py-3 bg-amber-400 text-zinc-950 font-black rounded-2xl text-xs uppercase tracking-wider hover:bg-amber-300 transition self-start shadow-lg flex items-center gap-2 whitespace-nowrap">
+            <span>💼</span>
+            <span data-lang-es>Adquirir Licencia Pro Solar ↗</span><span data-lang-en>Get Solar Pro License ↗</span>
+          </button>
         </article>
 
-        <!-- SOLAR PERSONAL -->
-        <article class="bg-zinc-900/80 rounded-[36px] p-8 border border-zinc-800/80 hover:border-zinc-700 transition duration-300 flex flex-col justify-between space-y-6">
+        <!-- INGJAVA CONSULTORÍA CAE/CFD -->
+        <article class="bg-gradient-to-br from-indigo-950/60 via-zinc-900 to-zinc-900 rounded-[36px] p-8 border border-indigo-500/30 flex flex-col justify-between space-y-6 overflow-hidden">
           <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="text-[10px] font-black uppercase tracking-widest bg-zinc-800 px-3.5 py-1.5 rounded-full text-zinc-300">
-                <span data-lang-es>Energía Sostenible</span><span data-lang-en>Sustainable Energy</span>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-3 py-1 rounded-full max-w-full truncate">
+                Consultoría Especializada • Servicios CAE
               </span>
-              <span class="text-xs font-mono text-zinc-500">Photovoltaic Sizing</span>
             </div>
-            <h3 class="text-2xl font-black uppercase text-white">Solar Personal App</h3>
-            <p class="text-sm text-zinc-400 leading-relaxed font-medium">
-              <span data-lang-es>Aplicación para el dimensionamiento energético de sistemas fotovoltaicos domiciliarios, optimizando el cálculo de potencia y la transición a energías renovables.</span>
-              <span data-lang-en>Application for energy sizing of domestic photovoltaic systems, optimizing power calculation for renewable energy transitions.</span>
+            <h3 class="text-2xl font-black uppercase text-white">IngJAVA Engineering</h3>
+            <p class="text-sm text-zinc-300 leading-relaxed font-medium">
+              <span data-lang-es>Servicios de simulación hidromecánica, análisis numérico por computadora (CAE / CFD) y desarrollo de maquinaria e infraestructuras a medida.</span>
+              <span data-lang-en>Hydromechanical simulation services, computer-aided engineering (CAE / CFD), and custom machinery development.</span>
             </p>
           </div>
 
-          <a href="/solarpersonal" class="px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-white rounded-2xl font-black text-xs uppercase tracking-wider transition self-start">
-            <span data-lang-es>Explorar Solar Personal →</span><span data-lang-en>Explore Solar Personal →</span>
-          </a>
+          <button data-open-modal="Solicitud de Consultoría IngJAVA CAE/CFD" class="px-6 py-3 bg-indigo-500 text-white font-black rounded-2xl text-xs uppercase tracking-wider hover:bg-indigo-400 transition self-start shadow-lg flex items-center gap-2 whitespace-nowrap">
+            <span>✉️</span>
+            <span data-lang-es>Solicitar Cotización CAE ↗</span><span data-lang-en>Request CAE Quote ↗</span>
+          </button>
         </article>
       </div>
     </section>
 
-    <!-- DOMINIO 4: SIMULACIÓN 3D, CAE & ECOSISTEMAS -->
-    <section id="simulacion" class="space-y-10">
+    <!-- DIVISIÓN ESCRITORIO, PLANTAZULA & SIMULACIÓN 3D -->
+    <section id="proyectos" class="space-y-10 scroll-mt-36 pt-6">
       <div class="border-b border-zinc-800/80 pb-6 space-y-2">
         <span class="text-xs font-black uppercase tracking-widest text-pink-400">
-          <span data-lang-es>División de Simulación, 3D & Ecosistemas</span><span data-lang-en>3D Simulation & Ecosystems Division</span>
+          <span data-lang-es>Ecosistemas Digitales & Herramientas</span><span data-lang-en>Digital Ecosystems & Tools</span>
         </span>
         <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight text-white">
-          <span data-lang-es>Modelado & Ingeniería Especializada</span><span data-lang-en>3D Modeling & Engineering</span>
+          <span data-lang-es>Escritorio, Comercio Verde & 3D</span><span data-lang-en>Desktop, Green E-Commerce & 3D</span>
         </h2>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- SIMPLE 3D VIEWER -->
-        <article class="bg-zinc-900/80 rounded-[32px] p-8 border border-zinc-800/80 hover:border-zinc-700 transition duration-300 flex flex-col justify-between space-y-6">
-          <div class="space-y-4">
-            <span class="text-[10px] font-black uppercase tracking-widest bg-zinc-800 px-3 py-1 rounded-full text-zinc-300">
-              <span data-lang-es>Visualización 3D</span><span data-lang-en>3D Visualization</span>
-            </span>
-            <h3 class="text-2xl font-black uppercase text-white">Simple 3D Viewer</h3>
-            <p class="text-xs text-zinc-400 leading-relaxed font-medium">
-              <span data-lang-es>Visor ligero de modelos 3D en formato .OBJ y .MTL directamente desde el navegador web.</span>
-              <span data-lang-en>Lightweight 3D model viewer for .OBJ and .MTL files directly in the browser.</span>
-            </p>
-          </div>
-          <a href="/simple3d" class="text-xs font-black uppercase tracking-wider text-purple-400 hover:underline">
-            <span data-lang-es>Explorar 3D Viewer →</span><span data-lang-en>Explore 3D Viewer →</span>
-          </a>
-        </article>
-
         <!-- PLANTAZULA STORE -->
-        <article class="bg-zinc-900/80 rounded-[32px] p-8 border border-zinc-800/80 hover:border-zinc-700 transition duration-300 flex flex-col justify-between space-y-6">
+        <article class="bg-zinc-900/80 rounded-[32px] p-8 border border-zinc-800/80 hover:border-zinc-700 transition duration-300 flex flex-col justify-between space-y-6 overflow-hidden">
           <div class="space-y-4">
-            <span class="text-[10px] font-black uppercase tracking-widest bg-zinc-800 px-3 py-1 rounded-full text-zinc-300">
-              <span data-lang-es>Comercio Sostenible</span><span data-lang-en>Sustainable Commerce</span>
+            <span class="inline-block text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-3 py-1 rounded-full max-w-full truncate">
+              Comercio Verde
             </span>
             <h3 class="text-2xl font-black uppercase text-white">PlantaZula Store</h3>
             <p class="text-xs text-zinc-400 leading-relaxed font-medium">
-              <span data-lang-es>Plataforma para la exhibición y comercialización de productos ecológicos, plantas y artesanías.</span>
-              <span data-lang-en>Platform for green products, plants, and artisanal handicrafts.</span>
+              Motor e-commerce ultraligero sin comisiones de plataforma para la exhibición y venta directa de plantas ornamentales, productos ecológicos y artesanías.
             </p>
           </div>
-          <a href="/plantazula" class="text-xs font-black uppercase tracking-wider text-emerald-400 hover:underline">
-            <span data-lang-es>Explorar PlantaZula →</span><span data-lang-en>Explore PlantaZula →</span>
-          </a>
+          <a href="/plantazula" class="text-xs font-black uppercase tracking-wider text-emerald-400 hover:underline whitespace-nowrap">Ver PlantaZula →</a>
         </article>
 
-        <!-- INGJAVA SERVICES -->
-        <article class="bg-zinc-900/80 rounded-[32px] p-8 border border-zinc-800/80 hover:border-zinc-700 transition duration-300 flex flex-col justify-between space-y-6">
+        <!-- METV PLAYER -->
+        <article class="bg-zinc-900/80 rounded-[32px] p-8 border border-zinc-800/80 hover:border-zinc-700 transition duration-300 flex flex-col justify-between space-y-6 overflow-hidden">
           <div class="space-y-4">
-            <span class="text-[10px] font-black uppercase tracking-widest bg-zinc-800 px-3 py-1 rounded-full text-zinc-300">
-              <span data-lang-es>Ingeniería Hidromecánica</span><span data-lang-en>Hydromechanical Engineering</span>
+            <span class="inline-block text-[10px] font-bold uppercase tracking-wider bg-zinc-800 px-3 py-1 rounded-full text-zinc-300 max-w-full truncate">
+              Software Desktop (Rust)
             </span>
-            <h3 class="text-2xl font-black uppercase text-white">IngJAVA Services</h3>
+            <h3 class="text-2xl font-black uppercase text-white">meTV+ Player</h3>
             <p class="text-xs text-zinc-400 leading-relaxed font-medium">
-              <span data-lang-es>Portafolio de proyectos de ingeniería hidromecánica, simulación numérica y análisis asistido por computador (CAE).</span>
-              <span data-lang-en>Portfolio of hydromechanical engineering, numerical simulation, and CAE projects.</span>
+              Reproductor multimedia ultraligero para M3U y MP4. Compilado con Tauri para macOS, Linux y Web.
             </p>
           </div>
-          <a href="/ingjava" class="text-xs font-black uppercase tracking-wider text-amber-400 hover:underline">
-            <span data-lang-es>Explorar IngJAVA →</span><span data-lang-en>Explore IngJAVA →</span>
-          </a>
+          <a href="/metv" class="text-xs font-black uppercase tracking-wider text-purple-400 hover:underline whitespace-nowrap">Ver meTV+ Player →</a>
+        </article>
+
+        <!-- SIMPLE 3D VIEWER -->
+        <article class="bg-zinc-900/80 rounded-[32px] p-8 border border-zinc-800/80 hover:border-zinc-700 transition duration-300 flex flex-col justify-between space-y-6 overflow-hidden">
+          <div class="space-y-4">
+            <span class="inline-block text-[10px] font-bold uppercase tracking-wider bg-zinc-800 px-3 py-1 rounded-full text-zinc-300 max-w-full truncate">
+              Visualización 3D
+            </span>
+            <h3 class="text-2xl font-black uppercase text-white">Simple 3D Viewer</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed font-medium">
+              Visor ligero de modelos 3D en formato .OBJ y .MTL directamente desde el navegador web.
+            </p>
+          </div>
+          <a href="/simple3d" class="text-xs font-black uppercase tracking-wider text-purple-400 hover:underline whitespace-nowrap">Ver 3D Viewer →</a>
         </article>
       </div>
     </section>
 
     <!-- MANIFIESTO Y MATRIZ -->
-    <section id="manifiesto" class="bg-black/90 border border-zinc-800 rounded-[36px] p-8 md:p-12 space-y-8 shadow-2xl font-mono relative overflow-hidden">
+    <section id="manifiesto" class="bg-black/90 border border-zinc-800 rounded-[36px] p-8 md:p-12 space-y-8 shadow-2xl font-mono relative overflow-hidden scroll-mt-36 pt-6">
       <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
         <div class="flex items-center gap-2">
           <div class="w-3 h-3 rounded-full bg-red-500"></div>
@@ -348,7 +435,7 @@ import StudioLayout from '../layouts/StudioLayout.astro';
           <div class="w-3 h-3 rounded-full bg-green-500"></div>
           <span class="text-xs text-zinc-500 ml-2">appjava-studio-core.v5</span>
         </div>
-        <span class="text-xs text-purple-400">STATUS: ACTIVE_SUSTAINABLE</span>
+        <span class="text-xs text-purple-400">STATUS: ACTIVE_COMMERCIAL</span>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8 text-xs font-sans">
@@ -390,9 +477,7 @@ import StudioLayout from '../layouts/StudioLayout.astro';
     <!-- FOOTER DEL ESTUDIO -->
     <footer class="pt-12 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-zinc-500">
       <div class="space-y-1 text-center md:text-left">
-        <p data-lang-es class="font-bold text-zinc-300">Copyright © 2026 appjava.dev. Todos los derechos reservados.</p>
-        <p data-lang-en class="font-bold text-zinc-300">Copyright © 2026 appjava.dev. All rights reserved.</p>
-      
+        <p class="font-bold text-zinc-300">Copyright © 2026 appjava.dev. Todos los derechos reservados.</p>
       </div>
 
       <div class="flex gap-6 font-bold uppercase tracking-wider text-zinc-400">
@@ -407,9 +492,184 @@ import StudioLayout from '../layouts/StudioLayout.astro';
     </footer>
 
   </main>
+
+  <!-- MODAL B2B CON DESPLEGABLE <SELECT> INTERACTIVO -->
+  <div id="b2b-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="bg-zinc-900 border border-purple-500/30 w-full max-w-lg rounded-[32px] p-8 shadow-2xl space-y-6 relative text-zinc-100">
+      
+      <!-- BOTÓN CERRAR -->
+      <button id="close-modal" class="absolute top-6 right-6 text-zinc-400 hover:text-white text-xl font-bold w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center transition">
+        ✕
+      </button>
+
+      <div class="space-y-2">
+        <span class="text-[10px] font-black uppercase tracking-widest text-purple-400 bg-purple-500/10 border border-purple-500/20 px-3 py-1 rounded-full">
+          appjava.dev • B2B & Engineering
+        </span>
+        <h3 class="text-2xl font-black uppercase text-white">
+          <span data-lang-es>Solicitar Cotización / Licencia</span>
+          <span data-lang-en>Request Quote / License</span>
+        </h3>
+        <p class="text-xs text-zinc-400 font-medium">
+          <span data-lang-es>Selecciona el servicio e ingresa tus datos. Un ingeniero se comunicará directamente a tu correo.</span>
+          <span data-lang-en>Select a service and fill in your details. A lead engineer will reply directly to your email.</span>
+        </p>
+      </div>
+
+      <!-- FORMULARIO EMAILJS CON DESPLEGABLE SELECT -->
+      <form id="emailjs-form" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-bold text-zinc-300 uppercase tracking-wider mb-1">
+            <span data-lang-es>Servicio Requerido *</span><span data-lang-en>Required Service *</span>
+          </label>
+          
+          <!-- DESPLEGABLE SELECT INTERACTIVO BILINGÜE -->
+          <select id="form-title" name="title" required class="w-full bg-zinc-800 border border-purple-500/50 rounded-xl px-4 py-3 text-purple-300 font-bold focus:outline-none focus:border-purple-400 cursor-pointer">
+            <option value="Consultoría General B2B">Consultoría General B2B - General Consulting</option>
+            <option value="Licencia Pro Solar Personal App B2B">Licencia Pro Solar Personal App (B2B)</option>
+            <option value="Solicitud de Consultoría IngJAVA CAE/CFD">Consultoría Hidromecánica & CAE-CFD (IngJAVA)</option>
+            <option value="Consultoría Hábitat Sustentable EchoHome">Hábitat Sustentable & Domótica IoT (EchoHome)</option>
+            <option value="Cotización de Proyecto Especializado">Desarrollo de Proyecto a Medida - Custom Project</option>
+            <option value="Framework E-Commerce PlantaZula">Framework E-Commerce Verde (PlantaZula)</option>
+            <option value="Licencias / Adaptación SofiSuite">Licencias - Adaptación SofiSuite (Móvil)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-bold text-zinc-300 uppercase tracking-wider mb-1">
+            <span data-lang-es>Nombre Completo / Empresa *</span><span data-lang-en>Full Name / Company *</span>
+          </label>
+          <input type="text" id="form-name" name="name" required placeholder="Ej. Ing. Carlos Pérez / Soles S.A.S." class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder:text-zinc-500 focus:border-purple-500 focus:outline-none" />
+        </div>
+
+        <div>
+          <label class="block font-bold text-zinc-300 uppercase tracking-wider mb-1">
+            <span data-lang-es>Correo Electrónico *</span><span data-lang-en>Email Address *</span>
+          </label>
+          <input type="email" id="form-email" name="email" required placeholder="carlos@empresa.com" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder:text-zinc-500 focus:border-purple-500 focus:outline-none" />
+        </div>
+
+        <div>
+          <label class="block font-bold text-zinc-300 uppercase tracking-wider mb-1">
+            <span data-lang-es>Detalles del Proyecto / Requerimientos *</span><span data-lang-en>Project Details / Requirements *</span>
+          </label>
+          <textarea id="form-message" name="message" rows="3" required placeholder="Describe brevemente tus requerimientos o licencias solicitadas..." class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 text-white placeholder:text-zinc-500 focus:border-purple-500 focus:outline-none resize-none"></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn" class="w-full py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black uppercase tracking-wider rounded-xl transition shadow-lg shadow-purple-500/20 text-xs">
+          <span data-lang-es>Enviar Solicitud Directa 🚀</span><span data-lang-en>Send Direct Request 🚀</span>
+        </button>
+
+        <p id="form-status" class="text-center font-bold text-xs hidden pt-2"></p>
+      </form>
+
+    </div>
+  </div>
 </StudioLayout>
 
+<!-- SDK DE EMAILJS -->
+<script is:inline src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script is:inline>
+  // INICIALIZACIÓN DE EMAILJS CON TU CLAVE PÚBLICA
+  (function() {
+    emailjs.init("-tfdUcbLxWb0za5vg");
+  })();
+
+  function setupModalAndEmailJS() {
+    const modal = document.getElementById('b2b-modal');
+    const closeModalBtn = document.getElementById('close-modal');
+    const formTitleSelect = document.getElementById('form-title');
+    const form = document.getElementById('emailjs-form');
+    const formStatus = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
+
+    // APERTURA DE MODAL CON PRESELECCIÓN EN EL DESPLEGABLE SELECT
+    document.querySelectorAll('[data-open-modal]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const requestedService = btn.getAttribute('data-open-modal') || 'Consultoría General B2B';
+        
+        // AUTO-SELECCIONAR EL OPCIÓN EN EL SELECT SI COINCIDE
+        if (formTitleSelect) {
+          for (let option of formTitleSelect.options) {
+            if (option.value === requestedService) {
+              option.selected = true;
+              break;
+            }
+          }
+        }
+
+        if (modal) {
+          modal.classList.remove('opacity-0', 'pointer-events-none');
+          modal.classList.add('opacity-100');
+        }
+      });
+    });
+
+    // CIERRE DE MODAL
+    if (closeModalBtn) {
+      closeModalBtn.addEventListener('click', () => {
+        if (modal) {
+          modal.classList.add('opacity-0', 'pointer-events-none');
+          modal.classList.remove('opacity-100');
+        }
+      });
+    }
+
+    // ENVÍO VÍA EMAILJS
+    if (form) {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerText = "Enviando Solicitud...";
+        }
+
+        const serviceID = "service_5cvbguk"; // Tu Service ID de EmailJS
+        const templateID = "template_5hxravo"; // Tu Template ID de EmailJS
+
+        const templateParams = {
+          title: document.getElementById('form-title').value,
+          name: document.getElementById('form-name').value,
+          email: document.getElementById('form-email').value,
+          message: document.getElementById('form-message').value,
+          time: new Date().toLocaleString()
+        };
+
+        emailjs.send(serviceID, templateID, templateParams)
+          .then(function() {
+            if (formStatus) {
+              formStatus.classList.remove('hidden', 'text-red-400');
+              formStatus.classList.add('text-emerald-400');
+              formStatus.innerText = "¡Solicitud enviada con éxito! Un ingeniero te responderá en breve.";
+            }
+            form.reset();
+            setTimeout(() => {
+              if (modal) modal.classList.add('opacity-0', 'pointer-events-none');
+              if (formStatus) formStatus.classList.add('hidden');
+              if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerText = "Enviar Solicitud Directa 🚀";
+              }
+            }, 3000);
+          }, function(error) {
+            console.error("Error EmailJS:", error);
+            if (formStatus) {
+              formStatus.classList.remove('hidden', 'text-emerald-400');
+              formStatus.classList.add('text-red-400');
+              formStatus.innerText = "Inconveniente en el envío. Escríbenos a projects.appjavadev@gmail.com";
+            }
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerText = "Enviar Solicitud Directa 🚀";
+            }
+          });
+      });
+    }
+  }
+
   function setupLangToggle() {
     const savedLang = localStorage.getItem('appjava_lang') || 'es';
     
@@ -439,4 +699,5 @@ import StudioLayout from '../layouts/StudioLayout.astro';
   }
 
   setupLangToggle();
+  setupModalAndEmailJS();
 </script>

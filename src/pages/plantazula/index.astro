@@ -2,38 +2,97 @@
 import StudioLayout from '../../layouts/StudioLayout.astro';
 ---
 
-<StudioLayout title="PlantaZula Store — Comercio Verde & Sostenible | appjava.dev">
-  <main class="max-w-5xl mx-auto px-6 py-12 flex flex-col min-h-screen justify-between relative z-10">
-    <nav class="flex justify-between items-center mb-12">
-      <a href="/" class="text-xs font-black uppercase tracking-wider text-zinc-400 hover:text-white">← Volver al Portal</a>
-      <div class="bg-zinc-800 p-1 rounded-full flex gap-1 text-[11px] font-bold text-zinc-300">
-        <button class="lang-btn px-3 py-1 rounded-full" data-target="es">ES</button>
-        <button class="lang-btn px-3 py-1 rounded-full" data-target="en">EN</button>
+<StudioLayout 
+  title="PlantaZula Store — Motor E-Commerce Verde & Sin Fricción | appjava.dev"
+  description="Plataforma de comercio electrónico de alta velocidad para viveros, botánica y productos sostenibles. Cero comisiones por transacción y arquitectura local-first."
+>
+  <main class="max-w-6xl mx-auto px-6 py-12 flex flex-col gap-24 relative z-10 text-zinc-100">
+    
+    <!-- HEADER Y NAVEGACIÓN -->
+    <nav class="flex justify-between items-center py-4 border-b border-zinc-800">
+      <a href="/" class="text-xs font-black uppercase tracking-wider text-zinc-400 hover:text-white transition flex items-center gap-2">
+        <span>←</span>
+        <span data-lang-es>Volver al Portal appjava.dev</span>
+        <span data-lang-en>Back to appjava.dev Portal</span>
+      </a>
+
+      <div class="bg-zinc-900 p-1 rounded-full flex gap-1 border border-zinc-800 text-[11px] font-bold text-zinc-300">
+        <button class="lang-btn px-3 py-1 rounded-full transition-all duration-300" data-target="es">ES</button>
+        <button class="lang-btn px-3 py-1 rounded-full transition-all duration-300" data-target="en">EN</button>
       </div>
     </nav>
 
-    <section class="bg-gradient-to-br from-emerald-950 via-zinc-900 to-zinc-900 border border-emerald-500/30 p-8 md:p-16 rounded-[40px] space-y-8 shadow-2xl">
-      <div class="space-y-3">
-        <span class="text-xs font-black uppercase tracking-widest text-emerald-400">Comercio Sostenible</span>
-        <h1 class="text-4xl md:text-6xl font-black uppercase text-white">PlantaZula Store</h1>
+    <!-- HERO DE PLANTAZULA -->
+    <section class="bg-gradient-to-br from-emerald-950/90 via-zinc-900 to-zinc-900 border border-emerald-500/30 p-8 md:p-14 rounded-[40px] shadow-2xl relative overflow-hidden space-y-8">
+      <div class="space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-black uppercase tracking-widest">
+          🪴 Framework de Comercio Sostenible
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-black uppercase text-white tracking-tight">PlantaZula StoreApp</h1>
+        
+        <p class="text-2xl font-bold text-emerald-200 max-w-3xl">
+          <span data-lang-es>Motor de e-commerce ultraligero para viveros, botánica y productos ecológicos.</span>
+          <span data-lang-en>Ultralight e-commerce engine for botanical nurseries and eco-friendly products.</span>
+        </p>
       </div>
 
-      <p class="text-zinc-300 text-lg leading-relaxed font-medium">
-        <span data-lang-es>Plataforma para la exhibición y comercialización de productos ecológicos, plantas y artesanías. Diseñada con arquitectura ligera y carrito local para un comercio ético y directo.</span>
-        <span data-lang-en>E-commerce platform for eco-friendly products, plants, and handicrafts. Built with lightweight architecture and local cart management.</span>
+      <p class="text-zinc-300 text-base leading-relaxed font-medium max-w-3xl">
+        <span data-lang-es>
+          PlantaZula demuestra cómo la tecnología sin fricción impulsa los negocios verdes. Con un carrito de compras local-first en `LocalStorage`, carga instantánea y cero comisiones mensuales de plataforma, es la solución perfecta para artesanos y viveros que desean vender directamente a sus clientes.
+        </span>
+        <span data-lang-en>
+          PlantaZula shows how frictionless technology drives eco-friendly businesses. Built with a local-first cart in `LocalStorage`, instant load times, and zero monthly fees, it's the ideal framework for local artisans and plant nurseries.
+        </span>
       </p>
 
       <div class="flex flex-wrap gap-4 pt-4">
-        <a href="https://plantazulastore.pages.dev/" target="_blank" class="px-8 py-3.5 bg-white text-zinc-950 rounded-2xl font-black text-xs uppercase tracking-wider hover:bg-emerald-100 transition shadow-lg">
-          <span data-lang-es>Visitar Tienda PlantaZula ↗</span>
-          <span data-lang-en>Visit PlantaZula Store ↗</span>
+        <a href="https://plantazulastore.pages.dev/" target="_blank" class="px-8 py-4 bg-emerald-400 text-zinc-950 rounded-2xl font-black text-xs uppercase tracking-wider hover:bg-emerald-300 transition shadow-lg">
+          <span data-lang-es>Visitar PlantaZula Store ↗</span><span data-lang-en>Visit PlantaZula Store ↗</span>
+        </a>
+        <a href="mailto:projects.appjavadev@gmail.com?subject=Implementacion%20de%20Tienda%20ECommerce%20Verde" class="px-8 py-4 bg-zinc-900 border border-zinc-700 text-white rounded-2xl font-black text-xs uppercase tracking-wider hover:bg-zinc-800 transition">
+          <span data-lang-es>Implementar Tienda para mi Negocio ↗</span><span data-lang-en>Get E-Commerce Engine ↗</span>
         </a>
       </div>
     </section>
 
-    <footer class="mt-16 pt-8 border-t border-zinc-800 text-xs text-zinc-500 font-bold uppercase flex justify-between">
-      <p>© 2026 appjava.dev • PlantaZula</p>
-      <a href="/" class="hover:text-white">appjava.dev</a>
+    <!-- FOOTER AGNÓSTICO -->
+    <footer class="pt-12 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-zinc-500">
+      <p>© 2026 appjava.dev. Todos los derechos reservados.</p>
+      <a href="/" class="hover:text-white transition">appjava.dev</a>
     </footer>
+
   </main>
 </StudioLayout>
+
+<script is:inline>
+  function setupLangToggle() {
+    const savedLang = localStorage.getItem('appjava_lang') || 'es';
+    
+    function updateUI(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        const target = btn.getAttribute('data-target');
+        if (target === lang) {
+          btn.classList.add('bg-emerald-600', 'text-white');
+          btn.classList.remove('text-zinc-400');
+        } else {
+          btn.classList.remove('bg-emerald-600', 'text-white');
+          btn.classList.add('text-zinc-400');
+        }
+      });
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-target');
+        localStorage.setItem('appjava_lang', lang);
+        updateUI(lang);
+      });
+    });
+
+    updateUI(savedLang);
+  }
+
+  setupLangToggle();
+</script>

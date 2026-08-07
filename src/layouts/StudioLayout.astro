@@ -7,53 +7,53 @@ interface Props {
 }
 
 const { 
-  title = "appjava.dev — Estudio de Software Independiente", 
-  description = "Soluciones tecnológicas sostenibles. Aplicaciones nativas de pago único, 100% offline y privacidad local-first." 
+  title = "appjava.dev — Estudio de Soluciones Tecnológicas Sostenibles", 
+  description = "Estudio de desarrollo e ingeniería multidisciplinaria. Software de alta gama, ingeniería energética, domótica local, simulación 3D y tecnología ambientalmente sostenible." 
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, "https://appjava.pages.dev");
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   
-  <!-- SEO -->
+  <!-- SEO Y METADATOS -->
   <title>{title}</title>
   <meta name="title" content={title} />
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalURL} />
 
-  <!-- Open Graph -->
+  <!-- OPEN GRAPH -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content="https://appjava.pages.dev/badges/amazon.png" />
 
-  <!-- Script de Inicialización de Idioma (Evita parpadeos) -->
+  <!-- SCRIPT DE INICIALIZACIÓN DE IDIOMA SIN PARPADEO -->
   <script is:inline>
     const savedLang = localStorage.getItem('appjava_lang') || 'es';
     document.documentElement.setAttribute('data-lang', savedLang);
   </script>
 </head>
-<body class="bg-zinc-950 text-zinc-100 min-h-screen antialiased selection:bg-purple-600 selection:text-white font-sans">
+<body class="bg-[#09090b] text-zinc-100 min-h-screen antialiased selection:bg-purple-600 selection:text-white font-sans overflow-x-hidden">
   <slot />
 </body>
 </html>
 
 <style is:global>
   html {
-    font-family: 'Onest Variable', system-ui, sans-serif;
+    font-family: 'Onest Variable', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     scroll-behavior: smooth;
   }
   body {
     background-color: #09090b;
   }
-  /* Motor Bilingüe */
+  /* MOTOR BILINGÜE LIMPIO */
   html[data-lang="en"] [data-lang-es] { display: none !important; }
   html[data-lang="es"] [data-lang-en] { display: none !important; }
 </style>
