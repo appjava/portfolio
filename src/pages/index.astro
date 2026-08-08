@@ -524,14 +524,23 @@ import StudioLayout from '../layouts/StudioLayout.astro';
           </label>
           
           <!-- DESPLEGABLE SELECT INTERACTIVO BILINGÜE -->
-          <select id="form-title" name="title" required class="w-full bg-zinc-800 border border-purple-500/50 rounded-xl px-4 py-3 text-purple-300 font-bold focus:outline-none focus:border-purple-400 cursor-pointer">
-            <option value="Consultoría General B2B">Consultoría General B2B - General Consulting</option>
+          <select data-lang-es id="form-title" name="title" required class="w-full bg-zinc-800 border border-purple-500/50 rounded-xl px-4 py-3 text-purple-300 font-bold focus:outline-none focus:border-purple-400 cursor-pointer">
+            <option value="Consultoría General B2B">Consultoría General B2B</option>
             <option value="Licencia Pro Solar Personal App B2B">Licencia Pro Solar Personal App (B2B)</option>
             <option value="Solicitud de Consultoría IngJAVA CAE/CFD">Consultoría Hidromecánica - CAE & CFD (IngJAVA)</option>
             <option value="Consultoría Hábitat Sustentable EchoHome">Hábitat Sustentable & Domótica IoT (EchoHome)</option>
             <option value="Cotización de Proyecto Especializado">Desarrollo de Proyecto a Medida - Custom Project</option>
             <option value="Framework E-Commerce PlantaZula">Framework E-Commerce Verde (PlantaZula)</option>
             <option value="Licencias / Adaptación SofiSuite">Licencias - Adaptación SofiSuite (Móvil)</option>
+          </select>
+          <select data-lang-en id="form-title" name="title" required class="w-full bg-zinc-800 border border-purple-500/50 rounded-xl px-4 py-3 text-purple-300 font-bold focus:outline-none focus:border-purple-400 cursor-pointer">
+            <option value="Consultoría General B2B">General B2B Consulting</option>
+            <option value="Licencia Pro Solar Personal App B2B">Pro Solar Personal App License (B2B)</option>
+            <option value="Solicitud de Consultoría IngJAVA CAE/CFD">Hydromechanical Consulting - CAE & CFD (IngJAVA)</option>
+            <option value="Consultoría Hábitat Sustentable EchoHome">Sustainable Habitat & IoT Home Automation (EchoHome)</option>
+            <option value="Cotización de Proyecto Especializado">Customized Project Development</option>
+            <option value="Framework E-Commerce PlantaZula">Green E-Commerce Framework (PlantaZula)</option>
+            <option value="Licencias / Adaptación SofiSuite">Licenses - SofiSuite Adaptation (Mobile)</option>
           </select>
         </div>
 
